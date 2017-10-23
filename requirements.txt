@@ -2,3 +2,5 @@ Flask
 Flask-SQLAlchemy
 gunicorn
 soundcloud
+Soundcloud
+six
