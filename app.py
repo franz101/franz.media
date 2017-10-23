@@ -12,9 +12,7 @@ def get_comments(url_in):
     try:
         track = client.get('/resolve', url=url_in)
         comments = client.get('/tracks/%d/comments' % track.id)
-    except:
-        comments = ['No Result... sorry']
-    for comment in comments:
+        for comment in comments:
         x = comment.body
         if " - " in x:
             if "@" in x:
@@ -24,6 +22,8 @@ def get_comments(url_in):
                     pass
             results.append(x)
             print (x)
+    except:
+        results = ['No Result... sorry']
     return results
 
 class CustomFlask(Flask):
