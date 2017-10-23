@@ -1,44 +1,130 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
 
-{% block style %}
-<style>
-#links {
-  margin-top: 30px;
-}
-#links ul {
-  list-style-type: none;
-  padding: 0;
-}
-#links li {
-  display: inline-block;
-  margin: 0 10px;
-}
-</style>
-{% endblock %}
+    <script src="static/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="static/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Soundcloud - Track IDs</title>
+</head>
 
-{% block body %}
-<div id="links">
-  <h1>Examples & Tips - Flask with Vue.js</h1>
-  <a href="https://github.com/yymm/flask-vuejs">README</a>
-  <ul>
-    <li><a href="(( url_for('example') ))">Jinja2 & Vue.js</a></li>
-    <li><a href="(( url_for('sqlalchemy') ))">with SQLAlchemy</a></li>
-    <li><a href="(( url_for('more') ))">more...</a></li>
-  </ul>
-  <h2>Single Page Application</h2>
-  <h3>using CDN</h3>
-  <ul>
-    <li><a href="(( url_for('router') ))">vue-router</a></li>
-  </ul>
-  <h3>using Node.js</h3>
-  <ul>
-    <li><a href="(( url_for('sfc') ))">Single File Component</a></li>
-    <li><a href="(( url_for('typescript') ))">TypeScript</a></li>
-    <li><a href="(( url_for('vuex') ))">Vuex</a></li>
-  </ul>
-  <h2>Ruins...</h2>
-  <ul>
-    <li><a href="(( url_for('v0_10_3') ))">vue.js v0.10.3</a></li>
-  </ul>
+<!--
+<div id="example">
+  <h2>Delimiters changing!</h2>
+  <p>Jinja2: ((message)) </p>
 </div>
-{% endblock %}
+
+<script>
+var example = new Vue({
+  el: "#example",
+  delimiters: ["[[", "]]"],
+  data: {
+    message: "((message))"
+  }
+})
+</script>
+-->
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a class="navbar-brand" href="#">
+                    <span>
+                        <img style="display: inline-block; height: 40px; margin-top: -10px"
+                             src="http://assets.stickpng.com/thumbs/580b57fcd9996e24bc43c537.png">
+                    </span>
+                </a>
+            </div>
+
+            <div class="col-md-4"><h1>Soundcloud - Track IDs</h1></div>
+
+           
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active">
+            <a href="#pane-zero" aria-controls="zero" role="tab" data-toggle="tab">Comment search</a>
+        </li>
+        <!--
+        <li role="presentation">
+            <a href="#pane-one" aria-controls="one" role="tab" data-toggle="tab">One</a>
+        </li>
+        <li role="presentation">
+            <a href="#pane-two" aria-controls="two" role="tab" data-toggle="tab">Two</a>
+        </li>
+        -->
+
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" style="margin-top: 10px">
+        <div role="tabpanel" class="tab-pane fade in active" id="pane-zero">
+            <div class="col-md-6">
+                <div id="app-zero">
+                  <!--<span v-bind:ts="ts">
+                        Side server timestamp: {% raw %}{{ ts }}{% endraw %}
+                  </span>-->
+                  <h1>Paste a Soundcloud url of a set</h1>
+                  <p>For Example:  http://soundcloud.com/hosh/h-o-s-h-panorama-bar-5-years </p>
+                  <form method="POST" action=".">
+                  <input id="post_form_id" name="fooput" value="" />
+                  <input type="submit">
+                  </form>
+                  {% if message %}
+                  You entered: ((message))
+                  <br>
+                  Some of the tracks in the comments are:
+                  <ul>
+{% for user in results %}
+  <li>((user))</li>
+{% endfor %}
+</ul>
+
+                  {% endif %}
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+
+        </div>
+        <!--
+        <div role="tabpanel" class="tab-pane" id="pane-one">
+            <div id="app-one">
+                <div>
+                    <one-list v-for="item in one_list" v-bind:item="item"></one-list>
+                </div>
+            </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="pane-two">
+            <div id="app-two">
+                <ol>
+                    <li v-for="item in two_list">
+                        {% raw %}{{ item }}{% endraw %}
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+        -->
+    </div>
+</div>
+</body>
+
+
+
+<script src="static/node_modules/vue/dist/vue.link.js"></script>
+<script src="static/node_modules/vue-resource/dist/vue-resource.min.js"></script>
+<script src="static/js/app.js"></script>
+
+</html>
+

@@ -1,7 +1,27 @@
 from flask import Flask, render_template, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-
+import soundcloud
+def get_comments(url_in):
+    client = soundcloud.Client(client_id='406ab22163491158a886303b41395b21',
+                           client_secret='7a6a23159d92fbba7d66cc6b57c9dc47',
+                           redirect_uri='google.com')
+    #redirect user to authorize URL
+    client.authorize_url()
+    track = client.get('/resolve', url=url_in)
+    comments = client.get('/tracks/%d/comments' % track.id)
+    results = []
+    for comment in comments:
+        x = comment.body
+        if " - " in x:
+            if "@" in x:
+                try:
+                    x = x.split(": ")[1]
+                except:
+                    pass
+            results.append(x)
+            print (x)
+    return results
 
 class CustomFlask(Flask):
     jinja_options = Flask.jinja_options.copy()
@@ -20,29 +40,16 @@ app.config.from_pyfile('db.cfg')
 db = SQLAlchemy(app)
 
 
-class Todo(db.Model):
-    __tablename__ = 'todos'
-    id = db.Column('todo_id', db.Integer, primary_key=True)
-    title = db.Column(db.String(60))
-    done = db.Column(db.Boolean)
-    pub_date = db.Column(db.DateTime)
 
-    def __init__(self, title):
-        self.title = title
-        self.done = False
-        self.pub_date = datetime.utcnow()
 
-    def get_dict(self):
-        return {
-            'id': self.id,
-            'title': self.title,
-            'done': self.done,
-            'pub_date': self.pub_date.strftime('%Y-%m-%d %H:%M'),
-        }
-
-@app.route('/')
+@app.route("/", methods=['POST', 'GET'])
 def index():
-    return render_template('index.html')
+    message = "Hello Flask!"
+    if request.method == 'POST':
+        return render_template('index.html', message = request.form['fooput'], results = get_comments(request.form['fooput']))
+#result=request.form['fooput']results = get_comments(request.form['fooput']
+    if request.method == 'GET':
+        return render_template('index.html')
 
 
 @app.route('/example')
@@ -109,6 +116,7 @@ def router():
 def sfc():
     return render_template('sfc.html')
 
+wurst = 'Wurstig'
 
 @app.route('/typescript')
 def typescript():
