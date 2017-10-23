@@ -8,9 +8,12 @@ def get_comments(url_in):
                            redirect_uri='google.com')
     #redirect user to authorize URL
     client.authorize_url()
-    track = client.get('/resolve', url=url_in)
-    comments = client.get('/tracks/%d/comments' % track.id)
     results = []
+    try:
+        track = client.get('/resolve', url=url_in)
+        comments = client.get('/tracks/%d/comments' % track.id)
+    except:
+        comments = ['No Result... sorry']
     for comment in comments:
         x = comment.body
         if " - " in x:
