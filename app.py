@@ -37,7 +37,6 @@ class CustomFlask(Flask):
 
 
 app = CustomFlask(__name__)
-app.config.from_pyfile('db.cfg')
 
 
 
@@ -49,6 +48,14 @@ def index():
 #result=request.form['fooput']results = get_comments(request.form['fooput']
     if request.method == 'GET':
         return render_template('index.html')
+
+@app.route("/film", methods=['POST', 'GET'])
+def film():
+    if request.method == 'POST':
+        return render_template('index.html', message = request.form['fooput'], results = get_comments(request.form['fooput']))
+#result=request.form['fooput']results = get_comments(request.form['fooput']
+    if request.method == 'GET':
+        return render_template('film.html')
 
 
 if __name__ == '__main__':
