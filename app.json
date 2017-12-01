@@ -1,7 +1,0 @@
-{
-  "name": "flask-vue.js",
-  "description": "Example & Tips, Flask with Vue.js. ",
-  "image": "heroku/python",
-  "repository": "https://github.com/yymm/flask-vuejs",
-  "keywords": ["python", "flask", "vue.js" ]
-}
