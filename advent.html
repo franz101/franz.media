@@ -476,7 +476,7 @@ import unidecode	<br><br>
 															The example:
 															<br>
 															<b>
-															timeformat = lambda date: pd.datetime.strptime(date, '%Y-%m-%d')
+															timeformat = lambda x: pd.datetime.strptime(x, '%Y-%m-%d')
 															pd.read_csv('date_example.csv', parse_dates=['date'], date_parser=timeformat)
 															</b><br><br><br>Thanks very much to <a href="https://www.packtpub.com/books/info/authors/theodore-petrou">Theodore Petrou</a>, the author of the Pandas Cookbook for sending me this line of code :)
 															<br>Software used:
@@ -568,7 +568,7 @@ import unidecode	<br><br>
 												</div>
 												<div class="col-md-7">
 													<div>
-														<h2 class="popup-head">11: Discover emerging trends</h2>
+														<h2 class="popup-head">11: Correlation heatmap</h2>
 													</div>
 													<div>
 														<p class="popup-parapraph">
