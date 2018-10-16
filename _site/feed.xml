@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-16T19:45:13+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">franz.media - Franz Krekeler personal website</title><subtitle>Seit 2016 Bachelor Student in Mensch-Computer-Interaktion an der Uni Hamburg. Vorher Videoredakteur bei Spiegel Online für bento. Leidenschaft für Datenanalyse und Datenbanken.
+</subtitle><author><name>franz.media</name></author><entry><title type="html">Whatsapp Analyse</title><link href="http://localhost:4000/whatsapp-statistiken/" rel="alternate" type="text/html" title="Whatsapp Analyse" /><published>2017-08-25T12:32:20+02:00</published><updated>2017-08-25T12:32:20+02:00</updated><id>http://localhost:4000/whatsapp-statistiken</id><content type="html" xml:base="http://localhost:4000/whatsapp-statistiken/">&lt;p&gt;In diesem Projekt ging es um die Visualisierung von Nachrichtenverläufen aus WhatsApp. Die wenigsten wissen man kann einen Chat als txt Datei exportieren und verschicken. Mit dem entwickelten Tool kannst du deinen Chat per E-Mail an whatsapporakel@gmail.com schicken und er wird analysiert und du bekommst innerhalb einer Minute ein Ergebnis zurück.&lt;/p&gt;
+
+&lt;p&gt;Link zur Mail-Adresse&lt;/p&gt;
+
+&lt;p&gt;Software genutzt:&lt;/p&gt;
+
+&lt;p&gt;Python
+Pandas, NLTK
+MatPlotLib
+PIL
+IMAPS&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/yosh-ginsu.jpg&quot; alt=&quot;Yosh Ginsu&quot; /&gt;&lt;/p&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Visualisierung von Nachrichtenverläufen aus WhatsApp. Die wenigsten wissen man kann einen Chat als txt Datei exportieren und verschicken. Mit dem entwickelten Tool kannst du deinen Chat per E-Mail an whatsapporakel@gmail.com schicken und er wird analysiert und du bekommst innerhalb einer Minute ein Ergebnis zurück.</summary></entry><entry><title type="html">Google Trends</title><link href="http://localhost:4000/google-trends-analysis/" rel="alternate" type="text/html" title="Google Trends" /><published>2017-08-24T12:32:20+02:00</published><updated>2017-08-24T12:32:20+02:00</updated><id>http://localhost:4000/google-trends-analysis</id><content type="html" xml:base="http://localhost:4000/google-trends-analysis/">&lt;p&gt;In diesem Projekt ging es um die Erfassung mehrer Google Trends am Beispiel von Stadtteilen in Hamburg&lt;/p&gt;
+
+&lt;p&gt;Link zum Google Sheets&lt;/p&gt;
+
+&lt;p&gt;Software genutzt:&lt;/p&gt;
+
+&lt;p&gt;Python
+Pandas
+Requests
+Google Sheets&lt;/p&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Erfassung mehrer Google Trends am Beispiel von Stadtteilen in Hamburg</summary></entry><entry><title type="html">Bento Überschriften Generator</title><link href="http://localhost:4000/bento-clickbait-title-generator/" rel="alternate" type="text/html" title="Bento Überschriften Generator" /><published>2017-08-23T12:32:20+02:00</published><updated>2017-08-23T12:32:20+02:00</updated><id>http://localhost:4000/bento-clickbait-title-generator</id><content type="html" xml:base="http://localhost:4000/bento-clickbait-title-generator/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Gebrauchtwagen Preise</title><link href="http://localhost:4000/gebrauchtwagen-preise/" rel="alternate" type="text/html" title="Gebrauchtwagen Preise" /><published>2017-08-22T12:32:20+02:00</published><updated>2017-08-22T12:32:20+02:00</updated><id>http://localhost:4000/gebrauchtwagen-preise</id><content type="html" xml:base="http://localhost:4000/gebrauchtwagen-preise/">&lt;p&gt;Wie teuer ist mein Auto wirklich? In diesem Projekt ging es um die Analyse der Gebrauchtwagen Preise von 2009 bis 2015. Interessant ist hier die Einbindung von monatlichen Kosten wie zum Beispiel: Versicherung, Kraftstoffkosten etc.&lt;/p&gt;
+
+&lt;p&gt;Link zum Google Sheets&lt;/p&gt;
+
+&lt;p&gt;Software genutzt:&lt;/p&gt;
+
+&lt;p&gt;Python
+Pandas
+Google Sheets&lt;/p&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Wie teuer ist mein Auto wirklich? In diesem Projekt ging es um die Analyse der Gebrauchtwagen Preise von 2009 bis 2015. Interessant ist hier die Einbindung von monatlichen Kosten wie zum Beispiel: Versicherung, Kraftstoffkosten etc.</summary></entry><entry><title type="html">NC Analyse</title><link href="http://localhost:4000/reicht-mein-nc-fuers-studium/" rel="alternate" type="text/html" title="NC Analyse" /><published>2017-08-21T12:32:20+02:00</published><updated>2017-08-21T12:32:20+02:00</updated><id>http://localhost:4000/reicht-mein-nc-fuers-studium</id><content type="html" xml:base="http://localhost:4000/reicht-mein-nc-fuers-studium/">&lt;p&gt;Werde ich es schaffen? Das ist eine Frage die sich viele Schüler und nicht Studenten bei der Bewerbung fragen. Für diese Frage, habe ich eine Hochrechnung des NCs gemacht und einen kleinen Blog-Post geschrieben.&lt;/p&gt;
+
+&lt;p&gt;Link zum Google Sheets&lt;/p&gt;
+
+&lt;p&gt;Software:&lt;/p&gt;
+
+&lt;p&gt;Google Sheets
+PDF2TABLES
+MEDIUM&lt;/p&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Werde ich es schaffen? Das ist eine Frage die sich viele Schüler und nicht Studenten bei der Bewerbung fragen. Für diese Frage, habe ich eine Hochrechnung des NCs gemacht und einen kleinen Blog-Post geschrieben.</summary></entry><entry><title type="html">Kartenanalyse</title><link href="http://localhost:4000/kartenanalyse-in-cartodb/" rel="alternate" type="text/html" title="Kartenanalyse" /><published>2017-08-20T12:32:20+02:00</published><updated>2017-08-20T12:32:20+02:00</updated><id>http://localhost:4000/kartenanalyse-in-cartodb</id><content type="html" xml:base="http://localhost:4000/kartenanalyse-in-cartodb/">&lt;p&gt;In diesem Projekt ging es um die Visualisierung von Immobilienpreisen über das Jahr 2010 bis 2016. Besonders interessant, war die Visualisierung als Heatmap.&lt;/p&gt;
+
+&lt;p&gt;Link zur interaktiven Karte&lt;/p&gt;
+
+&lt;p&gt;Software genutzt:&lt;/p&gt;
+
+&lt;p&gt;Python
+Pandas
+CartoDB&lt;/p&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Visualisierung von Immobilienpreisen über das Jahr 2010 bis 2016. Besonders interessant, war die Visualisierung als Heatmap.</summary></entry></feed>
