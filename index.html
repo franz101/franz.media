@@ -1,14 +1,7 @@
 ---
 layout: home-page
 ---
-  <div class="home-about-container">
-    <section class="home-about-header">
-      <div class="home-author-image-container">
-        <img class="home-author-image" src="{{site.baseurl}}/assets/img/{% if site.author-pic %}{{site.author-pic}}{% endif %}" alt="{{site.author}}">
-      <h3 class ="home-author-text">{{site.about-author}}</h3>
-      </div>
-    </section>
-  </div>
+{% include author-box.html %}
 <ol class="post-card-box clearfix">
   {% for post in paginator.posts reversed %}
   <li>
