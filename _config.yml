@@ -9,8 +9,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
 author: franz.media # add your name
-author-pic: adam-face.jpg
-about-author: My name is Adam Neilson. I’m a full-time adventure travel blogger and photographer who’s been exploring the world for over 2 years.
+author-pic: franz-face.jpg
+about-author: Hi, ich bin Franz. Seit 2016 Bachelor Student in Mensch-Computer-Interaktion an der Uni Hamburg.
+  Vorher Videoredakteur bei Spiegel Online für bento. Leidenschaft für Datenanalyse und Datenbanken.
 
 # Contact links
 email: fkrekeler+fm@gmail.com# Add your Email address
@@ -39,7 +40,7 @@ analytics: # Google Analytics
 # Paginate
 paginate: 6
 paginate_path: /page:num/
-
+colors: ["glass","shoes-glass","hand-parts","table-with-phone","orange-shoe","glass-shoes","girls-tops","egg-arts"]
 # Build settings
 markdown: kramdown
 

@@ -862,7 +862,7 @@ pre code {
 }
 
 .wrapper {
-  width: 960px;
+  width: 1024px;
   max-width: 90%;
   margin: 0 auto;
   position: relative;
@@ -890,7 +890,7 @@ pre code {
 
 /* = = = = = = = = = = Header Styles = = = = = = = = = = */
 .main-header {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 15px 0;
   background-color: #fff;
   -webkit-box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
@@ -921,7 +921,8 @@ pre code {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 27px;
-  font-weight: 300;
+  font-weight: 900;
+  letter-spacing: 0.35em;
   color: #311e3e;
 }
 
@@ -1064,9 +1065,11 @@ pre code {
   right: 0;
 }
 
+
 /* = = = = = = = = = = Post-Card Styles = = = = = = = = = = */
+
 .post-card-box {
-  margin: 100px 0 100px;
+  margin: 15px 0 100px;
   padding: 0;
 }
 
@@ -1075,6 +1078,7 @@ pre code {
   list-style: none;
   float: left;
   width: 50%;
+  padding: 10px 10px 10px 10px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -1087,10 +1091,10 @@ pre code {
   position: relative;
 }
 
-.post-card .post-card-image {
+.post-card .post-card-image{
   display: block;
   width: 100%;
-  min-height: 150px;
+  min-height: 250px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1104,13 +1108,17 @@ pre code {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
 }
 
+.glass{background: rgba(0,0,0,0.2)}
 .post-card .post-card-body {
   position: absolute;
-  left: 5%;
-  bottom: 5%;
+  top: 35%;
+  right: 10%;
+  left: 10%;
+  bottom: 35%;
+  align-content: center;
+
 }
 
 .post-card .post-card-body .post-card-link {
@@ -1121,15 +1129,17 @@ pre code {
 .post-card .post-card-body .post-card-title {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 25px;
   color: #fff;
-  margin: 0 0 10px;
 }
 
 .post-card .post-card-body .post-card-title:hover {
-  opacity: .8;
+opacity: 0.5;
 }
+
+
 
 .post-card .post-card-body .tag {
   text-decoration: none;
@@ -1141,6 +1151,228 @@ pre code {
 .post-card .post-card-body .tag:hover {
   text-decoration: underline;
 }
+
+
+/* = = = = = = = = = = Home Author Styles = = = = = = = = = = */
+
+
+.home-author-image-container .home-author-image { 
+  float: left;
+  
+  margin-right:2rem; 
+  border-radius: 50%;
+  margin: 00px 20px 20px;
+}
+
+.home-author-text { 
+  padding-right:4rem;
+  margin-right:4rem;
+  font-size:1.5vw;
+}
+
+.home-about-container{
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin:20px 10px 10px 10px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.home-about-container:hover{
+  transition: all .2s ease-in-out;
+  box-shadow: 0 20px 32px rgba(0,0,0,0.26), 0 11px 12px rgba(0,0,0,0.23);
+}
+/* = = = = = = = = = = Test Styles = = = = = = = = = = */
+.a a img.img-responsive {
+  opacity: 0.5;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.a a:hover img.img-responsive{
+  opacity: 1;
+}
+.a a .img-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+    opacity: 0.4;
+}
+.h3 {opacity: 1;}
+
+@media screen and (max-width: 768px) {
+  .a a .img-hover {
+  top: 0px;
+  bottom: 0px;
+  }
+}
+
+.a a:hover .img-hover {
+  opacity: 0;
+}
+.a a .img-hover.glass {
+    background: #ea766a;
+}
+.a a .img-hover.shoes-glass {
+    background: #a0c4a3;
+}
+.a a .img-hover.hand-parts {
+    background: #da9dd9;
+}
+.a a .img-hover.table-with-phone {
+    background: #6da178;
+}
+.a a .img-hover.orange-shoe {
+    background: #da9567;
+}
+.a a .img-hover.glass-shoes {
+    background: #5dc6aa;
+}
+.a a .img-hover.girls-tops {
+    background: #cab0a6;
+}
+.a a .img-hover.egg-arts {
+    background: #ddd173;
+}
+/*
+.a a .img-hover .c-table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.a a .img-hover .c-table .ct-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+*/
+.a a .img-hover  .img-title {
+  display: block;
+  letter-spacing: 5px;
+  transition: all 0.5s cubic-bezier(0.81, -0.14, 0.47, 1)
+}
+.img-title{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #fff;}
+
+.a a:hover .img-hover .img-title {
+    display: none;
+}
+
+
+:root {
+  --alpha: 0.7;
+  --glass:234,118,106;
+}
+/*.glass {background: rgba(var(--glass),var(--alpha))}
+.post-card .post-card-image .glass{background: rgba(234,118,106,var(--alpha))}
+.post-card .post-card-image .shoes-glass::after {background: rgba(160,196,163,var(--alpha))}
+.post-card .post-card-image .hand-parts::after {background: rgba(218,157,217,var(--alpha))}
+.post-card .post-card-image .table-with-phone::after {background: rgba(109,161,120,var(--alpha))}
+.post-card .post-card-image .orange-shoe::after {background: rgba(218,149,103,var(--alpha))}
+.post-card .post-card-image .glass-shoes::after {background: rgba(93,198,170,var(--alpha))}
+.post-card .post-card-image .girls-tops::after {background: rgba(202,176,166,var(--alpha))}
+.post-card .post-card-image .egg-arts::after {background: rgba(221,209,115,var(--alpha))}
+
+
+
+
+
+
+*/
+
+/* = = = = = = = = = = shop-Card Styles = = = = = = = = = = */
+.shop-card-box {
+  margin: 50px 0 100px;
+  padding: 0;
+}
+
+.shop-card-box li {
+  position: relative;
+  list-style: none;
+  float: left;
+  width: 50%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.shop-card-box li:hover {
+  opacity: 0.9;
+}
+
+.shop-card {
+  position: relative;
+}
+
+.shop-card .shop-card-image {
+  display: block;
+  width: 100%;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shop-card .shop-card-image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.0);
+}
+
+.shop-card .shop-card-body {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  opacity:0%;
+}
+
+.shop-card .shop-card-body .shop-card-link {
+  text-decoration: none;
+  display: block;
+}
+
+.shop-card .shop-card-body .shop-card-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 10px;
+  opacity: 0;
+  display: none;
+}
+
+.shop-card .shop-card-body .shop-card-title:hover {
+  opacity: 0;
+}
+
+.shop-card .shop-card-body .tag {
+  text-decoration: none;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.shop-card .shop-card-body .tag:hover {
+  text-decoration: underline;
+}
+
 
 /* = = = = = = = = = = Pagination Styles = = = = = = = = = = */
 .pagination {
@@ -1198,11 +1430,11 @@ pre code {
   margin-top: -80px;
   margin-bottom: 100px;
   background-color: #fff;
-  padding: 20px;
-  -webkit-border-top-left-radius: 20px;
-          border-top-left-radius: 20px;
-  -webkit-border-top-right-radius: 20px;
-          border-top-right-radius: 20px;
+  padding: 10px;
+  -webkit-border-top-left-radius: 10px;
+          border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+          border-top-right-radius: 10px;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
