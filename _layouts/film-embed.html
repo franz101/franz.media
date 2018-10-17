@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head_film_embed.html %}
+<body>
+    {% include javascripts.html %}
+    <div class="flex-container">
+            {% include header.html %}
+            <div class="content wrapper">
+                  
+                {% include search.html %}
+                {{ content }}
+                {% include search.html %}
+  {% include pagination.html %}
+  {% include author-box.html %}
+  </div> <!-- End Wrapper -->
+
+  {% include footer.html %}
+                
+          </div>
+</body>
+</html>
