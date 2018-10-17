@@ -2,13 +2,10 @@
 layout: default
 ---
 <div class="flex-container">
-  {% include header.html %}
+  {% include header-shop.html %}
   <article class="article-page">
-    <div class="page-image">
-      <div class="cover-image" style="background: url({{"/assets/img/" | prepend: site.baseurl | append : page.img}}) center no-repeat; background-size: cover;"></div>
-    </div>
     <div class="wrapper">
-      <div class="page-content">
+      <div class="shop-page-content">
         <div class="header-page">
             <div class="PageNavigation">
                 {% if page.previous.url %}
@@ -16,16 +13,19 @@ layout: default
                   {% else %}
                   <a class="prev .flex-item"></a>
                 {% endif %}
-                
                 <h1 class="page-title .flex-item">{{page.title}}</h1>
                 {% if page.next.url %}
                   <a class="next .flex-item"  href="{{page.next.url}}">&#8250;</a>
+                  {% else %}
+                  <a class="next .flex-item"></a>
                 {% endif %}
               </div>
-          <div class="page-date"><time datetime="{{page.date}}">{{page.date | date: '%Y, %b %d'}}</time></div>
+          <div class="page-date">29€</div>
         </div>
-        {{page.content | markdownify}}
-        <a href="{{page.project-url}}"><img class="page-image-below" src="{{"/assets/img/" | prepend: site.baseurl | append : page.img}}"</a>
+        <div class="shop-center"></div>
+        <img class="shop-image-below" src="{{"/assets/img/" | prepend: site.baseurl | append : page.img}}">
+        <h4>This Item is currently out of stock. Please contact the <a href="mailto:fkrekeler+hs@gmail.com">team</a> for a restock.</h4>
+    </div>
         <div class="page-footer">
           <div class="page-tag">
             <span>Tags:</span>

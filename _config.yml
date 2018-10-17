@@ -16,7 +16,7 @@ about-author: Hi, ich bin Franz. Seit 2016 Bachelor Student in Mensch-Computer-I
 # Contact links
 email: fkrekeler+fm@gmail.com# Add your Email address
 phone: # Add your Phone number
-website: # Add your website, do not add http://
+website: "github.com/franz101"
 linkedin: # Add your Linkedin handle
 github: franz101 # Add your Github handle
 twitter: '@filmfranz' # Add your Twitter handle
@@ -38,7 +38,7 @@ discus_identifier: mr-brown # Add your discus identifier
 analytics: # Google Analytics
 
 # Paginate
-paginate: 6
+paginate: 8
 paginate_path: /page:num/
 colors: ["glass","shoes-glass","hand-parts","table-with-phone","orange-shoe","glass-shoes","girls-tops","egg-arts"]
 # Build settings

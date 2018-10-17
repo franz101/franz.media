@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: shop-item
 title:  If I'm wearing this hat, leave me alone :)
 date:   2018-09-20 13:32:20 +0300
 description: Classic memes for classic teens
