@@ -6,7 +6,7 @@ permalink: /hacker-shop/
   {% for post in site.shop %}
   <li>
     <div class="shop-card">
-      <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image" style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
+      <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image" style="background-image: url( {{ "/assets/img/shop/" | prepend: site.baseurl | append : post.img}} )">
       </a>
 
       <div class="shop-card-body">

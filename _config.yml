@@ -9,7 +9,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Author settings
 author: franz.media # add your name
-author-pic: franz-face.jpg
+author-pic: "about/franz-face.jpg"
 about-author: Hi, ich bin Franz. Seit 2016 Bachelor Student in Mensch-Computer-Interaktion an der Uni Hamburg.
   Vorher Videoredakteur bei Spiegel Online für bento. Leidenschaft für Datenanalyse und Datenbanken.
 
@@ -29,10 +29,10 @@ collections:
     permalink: "/:collection/:title/"
   #data_advent
 # Newsletter
-mailchimp: # Add your MailChimp form identifier.
+mailchimp: "//media.us19.list-manage.com/subscribe/post?u=0a9c8a317e0829670dee8e388&amp;id=0becd46436"
 
 # Disqus
-discus_identifier: mr-brown # Add your discus identifier
+#discus_identifier: franz101k # Add your discus identifier
 
 # Tracker
 analytics: # Google Analytics
