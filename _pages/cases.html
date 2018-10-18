@@ -5,12 +5,7 @@ permalink: /cases/
 ---
 {% include author-box.html %}
 <ol class="post-card-box clearfix">
-  {% for post in paginator.posts%}
-  {% for tag in post.tags %}
-        {% for tag in post.tags %}
-        <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">|&#32;{{ tag }}</a>
-        {% endfor %}
-  {% if "Case" in {{tag}} %}
+  {% for post in paginator.posts %}
   <li>
     <div class="post-card">
    <div class="a">
@@ -24,8 +19,6 @@ permalink: /cases/
     </a>
   </div>
     </li>
-    {% endif %}
-    {% endfor %}
   {% endfor %}
   </ol>
 
