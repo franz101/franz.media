@@ -7,7 +7,8 @@ permalink: /cases/
 <ol class="post-card-box clearfix">
   {% for post in paginator.posts%}
   {% for tag in post.tags %}
-  {% if tag == "Case" %}
+  tag
+  {% if "Case" in tag %}
   <li>
     <div class="post-card">
    <div class="a">
