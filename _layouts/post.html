@@ -20,6 +20,8 @@ layout: default
                 <h1 class="page-title .flex-item">{{page.title}}</h1>
                 {% if page.next.url %}
                   <a class="next .flex-item"  href="{{page.next.url}}">&#8250;</a>
+               {% else %}
+                  <a class="next .flex-item"></a>
                 {% endif %}
               </div>
           <div class="page-date"><time datetime="{{page.date}}">{{page.date | date: '%Y, %b %d'}}</time></div>
