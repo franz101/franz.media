@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Whatsapp Analyse - franz.media - Franz Krekeler personal website</title>
+	<title>Buchungssystem in Google Sheets - franz.media - Franz Krekeler personal website</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -58,51 +58,68 @@
 
   <article class="article-page">
     <div class="page-image">
-      <div class="cover-image" style="background: url(/assets/img/post/2.jpg) center no-repeat; background-size: cover;"></div>
+      <div class="cover-image" style="background: url(/assets/img/post/buchungssystem1.jpg) center no-repeat; background-size: cover;"></div>
     </div>
     <div class="wrapper">
       <div class="page-content">
         <div class="header-page">
             <div class="PageNavigation">
                 
-                  <a class="prev .flex-item" href="/google-trends-analysis/">&#8249;</a>
+                  <a class="prev .flex-item" href="/whatsapp-statistiken/">&#8249;</a>
                   
                 
-                <h1 class="page-title .flex-item">Whatsapp Analyse</h1>
+                <h1 class="page-title .flex-item">Buchungssystem in Google Sheets</h1>
                 
-                  <a class="next .flex-item"  href="/rechnungen/">&#8250;</a>
-               
+                  <a class="next .flex-item"></a>
+                
               </div>
-          <div class="page-date"><time datetime="2017-08-25 12:32:20 +0200">2017, Aug 25</time></div>
+          <div class="page-date"><time datetime="2018-10-18 12:32:20 +0200">2018, Oct 18</time></div>
         </div>
-        <p>In diesem Projekt ging es um die Visualisierung von Nachrichtenverläufen aus WhatsApp. Die wenigsten wissen man kann einen Chat als txt Datei exportieren und verschicken. Mit dem entwickelten Tool kannst du deinen Chat per E-Mail an whatsapporakel@gmail.com schicken und er wird analysiert und du bekommst innerhalb einer Minute ein Ergebnis zurück.</p>
+        <p>Automatisiertes Buchungssystem in Google Sheets</p>
 
-<p><a href="mailto:whatsapporakel@gmail.com">Link zur Mail-Adresse</a></p>
-
-<p>Software genutzt:</p>
+<p>In diesem Case habe ich meinen Rechnungsprozess automatisiert.
+Die Funktionen von der Google App Script Engine in JavaScript machten es möglich.
+Folgende Funktionen habe ich implemntiert:</p>
 <ul>
-  <li>Python</li>
-  <li>Pandas, NLTK</li>
-  <li>MatPlotLib</li>
-  <li>PIL</li>
-  <li>IMAPS</li>
+  <li>Rechnungen nach Erstellung in einem neuen Sheet speichern.</li>
+  <li>Uebersicht von allen gestellten Rechnungen.</li>
+  <li>Alte Rechnungen laden.</li>
+  <li>Umwandlung als PDF. Speichern im Google Drive Ordner.</li>
+  <li>Automatischer Versand per Mail.</li>
+  <li>Timerfunktion, wenn die Mail erst am nächsten Tag verschickt werden soll.</li>
+  <li>Massenversand von allen fertigen Rechnungen.</li>
 </ul>
 
-        <a href="mailto:whatsapporakel@gmail.com"><img class="page-image-below" src="/assets/img/post/2.jpg"</a>
+<p>Buchungsystem in Aktion:</p>
+
+<p>Der Mail-Dialog. An diese Mail wird dann eine Rechnung als PDF verschickt.
+<img src="/assets/img/post/buchungssystem1.jpg" alt="Buchungsystem in Aktion: Hier kommt der Mail-Dialog. An diese Mail wird dann eine Rechnung als PDF verschickt." /></p>
+
+<p>Die Datenbank von gestellten Rechnungen
+<img src="/assets/img/post/buchungssystem3.jpg" alt="Buchungsystem in Aktion: Hier sieht man die Datenbank von gestellten Rechnungen" />
+Der Code per Google App Script
+<img src="/assets/img/post/buchungssystem4.jpg" alt="Buchungsystem in Aktion: Der Code per Google App Script" />
+Folgende Möglichkeiten bietet das System.
+<img src="/assets/img/post/buchungssystem2.jpg" alt="Buchungsystem in Aktion: Folgende Möglichkeiten bietet das System." />
+So sieht die Mail dann aus, wenn sie verschickt wird
+<img src="/assets/img/post/buchungssystem5.jpg" alt="Buchungsystem in Aktion: So sieht die Rechnung dann aus, wenn sie verschickt wird." /></p>
+
+
+        <a href=""><img class="page-image-below" src="/assets/img/post/buchungssystem1.jpg"</a>
         <div class="page-footer">
           <div class="page-tag">
             <span>Tags:</span>
             
             <a href="/tags#Blog" class="tag">| Blog</a>
             
-            <a href="/tags#Data" class="tag">| Data</a>
+            <a href="/tags#Case" class="tag">| Case</a>
             
           </div><!-- End Tags -->
           <div class="page-share">
             <span>Share:</span>
-            <a href="https://twitter.com/intent/tweet?text=Whatsapp Analyse&url=http://localhost:4000/whatsapp-statistiken/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/whatsapp-statistiken/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="https://plus.google.com/share?url=http://localhost:4000/whatsapp-statistiken/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/intent/tweet?text=Buchungssystem in Google Sheets&url=http://localhost:4000/rechnungen/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/rechnungen/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/rechnungen/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
           </div><!-- End Share -->
         </div>
         <section class="author-box">
