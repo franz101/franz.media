@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/advent/2018-12-03_3/</loc>
+<lastmod>2017-12-03T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/advent/2018-12-01_1/</loc>
+<lastmod>2018-12-01T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/advent/2018-12-04_4/</loc>
+<lastmod>2018-12-04T01:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/advent/2018-12-05_5/</loc>
+<lastmod>2018-12-05T01:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/advent/2018-12-06_6/</loc>
+<lastmod>2018-12-06T01:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/advent/2018-12-02_2/</loc>
+<lastmod>2019-12-02T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/advent/2018-12-06_7/</loc>
+<lastmod>2019-12-06T01:00:00+01:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/kartenanalyse-in-cartodb/</loc>
 <lastmod>2017-08-20T12:32:20+02:00</lastmod>
 </url>
@@ -62,6 +90,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/advent-of-data-science-2018/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/advent/</loc>

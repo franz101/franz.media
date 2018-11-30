@@ -6,6 +6,11 @@ description: > # this means to ignore newlines until "baseurl:"
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+timezone:    Europe/Berlin
+
+future: false
+#site:
+#  future: false
 
 # Author settings
 author: franz.media # add your name
@@ -25,6 +30,9 @@ instagram: '@franzfilm' # Add your Instagram handle
 pinterest: # Add your Pinterest handle
 collections:
   shop:
+    output: true
+    permalink: "/:collection/:title/"
+  advent:
     output: true
     permalink: "/:collection/:title/"
   #data_advent

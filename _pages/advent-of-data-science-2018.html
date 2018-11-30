@@ -1,0 +1,26 @@
+---
+layout: advent
+permalink: /advent-of-data-science-2018/
+---
+<ol class="shop-card-box clearfix">
+  {% for post in site.advent %}
+  <li>
+    <div class="shop-card">
+      <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image" style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
+      </a>
+
+      <div class="shop-card-body">
+
+        <div class="tag-list">
+          <span><a href="{{ post.url }}">{{forloop.index}}</a></span>
+          </div>
+
+        <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-link"><h3 class="shop-card-title">{{post.title}}</h3></a>
+      </div>
+
+    </div>
+  </li>
+ 
+ 
+  {% endfor %}
+</ol>
