@@ -2,6 +2,7 @@
 layout: shop-item
 title:  If I'm wearing this hat, leave me alone :)
 date: 2019-12-02
+advent: 2
 description: Classic memes for classic teens
 img: advent.png # Add image post (optional)
 tags: [Shop, Social]
