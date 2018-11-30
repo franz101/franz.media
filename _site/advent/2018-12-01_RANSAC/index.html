@@ -57,20 +57,23 @@
     </header> <!-- End Header -->
     
     <div class="content wrapper">
-      <div class="flex-container">
+      <script>
+document.onkeydown = function(e) {
+
+    e = e || window.event;
+
+    switch(e.which)
+    {case 39:alert("rechts");break
+    case 37:alert("links");break
+  }
+  }
+</script>
+<div class="flex-container">
   <article class="article-page">
     <div class="wrapper">
       <div class="advent-page-content">
         <div class="header-page">
-            <div class="PageNavigation">
-                
-                  <a class="prev .flex-item"></a>
-                
-                <h1 class="page-title .flex-item">1st advent - RANSac Regression</h1>
-                
-                  <a class="next .flex-item"  href="/advent/2032-12-02_template-copy-10/">&#8250;</a>
-                  
-              </div>
+          
         </div>
         <div class="advent-center"></div>
         <img class="advent-image-below" src="/assets/img/advent2018/ransac_example.png">
@@ -98,7 +101,6 @@ If you enjoyed this post I’m looking forward to the next advent hoho.</p>
   <li>Python</li>
   <li>Sklearn</li>
 </ul>
-
 
 
         </div>

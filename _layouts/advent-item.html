@@ -1,30 +1,28 @@
 ---
 layout: advent
 ---
+<script>
+document.onkeydown = function(e) {
+
+    e = e || window.event;
+
+    switch(e.which)
+    {case 39:alert("rechts");break
+    case 37:alert("links");break
+  }
+  }
+</script>
 <div class="flex-container">
   <article class="article-page">
     <div class="wrapper">
       <div class="advent-page-content">
         <div class="header-page">
-            <div class="PageNavigation">
-                {% if page.previous.url %}
-                  <a class="prev .flex-item" href="{{page.previous.url}}">&#8249;</a>
-                  {% else %}
-                  <a class="prev .flex-item"></a>
-                {% endif %}
-                <h1 class="page-title .flex-item">{{page.title}}</h1>
-                {% if page.next.url %}
-                  <a class="next .flex-item"  href="{{page.next.url}}">&#8250;</a>
-                  {% else %}
-                  <a class="next .flex-item"></a>
-                {% endif %}
-              </div>
+          
         </div>
         <div class="advent-center"></div>
         <img class="advent-image-below" src="{{"/assets/img/advent2018/" | prepend: site.baseurl | append : page.img}}">
         <div class= "description">
             {{page.content | markdownify}}
-
         </div>
         <div class="page-footer">
           <div class="page-tag">
