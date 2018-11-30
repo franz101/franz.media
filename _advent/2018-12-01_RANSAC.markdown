@@ -1,9 +1,9 @@
 ---
 layout: advent-item
-title: 1st advent - RANSac Regression
+title: 1st advent - RANSACRegressor 
 date: 2018-11-30
 advent: 1
-description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
+description: For this day here is the RANSACRegressor # Add post description (optional)
 img: ransac_example.png # Add image post (optional)
 tags: [Blog, Advent, Data]
 author: # Add name author (optional)
