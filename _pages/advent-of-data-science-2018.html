@@ -8,18 +8,24 @@ If you like to submit something. Feel free to send me an <a href="mailto:fkrekel
   {% for post in site.advent %}
   <li>
     <div class="shop-card {{site.colors[forloop.index0]}}">
-      <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
-      </a>
+      {% if post.unclickable != True %}
+      <p  class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
+      </p>
 
       <div class="shop-card-body">
 
         <div class="tag-list">
-          {% if post.unclickable != True %}
           
           <span></span>
           </div>
           <p class="shop-card-link"><h3 class="shop-card-title"> </h3></a>
          {% else %}
+         <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
+         </a>
+   
+         <div class="shop-card-body">
+   
+           <div class="tag-list">
          <span><a href="{{ post.url }}">{{post.advent}}</a></span>
         </div>
         <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-link"><h3 class="shop-card-title">{{post.title}}</h3></a>
