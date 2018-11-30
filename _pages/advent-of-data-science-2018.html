@@ -2,33 +2,34 @@
 layout: advent
 permalink: /advent-of-data-science-2018/
 ---
-Ho ho ho! As last year, each day you will find little snippets, resources or links for people who are passionate about data science.
-If you like to submit something. Feel free to send me an <a href="mailto:fkrekeler+data@gmail.com">mail</a>.
-<ol class="shop-card-box clearfix">
+🎁 Ho ho ho! 🎄 Each day you will find little snippets, resources or links related to data science. 🌟
+<br> If you are passionate about data science please stay tuned. 🎅 <br>
+If you like to submit something. Feel free to send me an <a href="mailto:fkrekeler+data@gmail.com">mail</a>.   ❄️  🦌
+<ol class="advent-card-box clearfix">
   {% for post in site.advent %}
   <li>
-    <div class="shop-card {{site.colors[forloop.index0]}}">
+    <div class="advent-card {{site.colors[forloop.index0]}}">
       {% if post.unclickable != True %}
-      <a  class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
+      <a  class="advent-card-image " style="background-image: url( {{ "/assets/img/advent2018/advent.png" | prepend: site.baseurl}} )">
       </a>
 
-      <div class="shop-card-body">
+      <div class="advent-card-body">
 
         <div class="tag-list">
           
           <span><a>{{post.advent}}</a></span>
           </div>
-          <p class="shop-card-link"><h3 class="shop-card-title"> </h3></a>
+          <p class="advent-card-link"><h3 class="advent-card-title"> </h3></a>
          {% else %}
-         <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
+         <a href="{{post.url | prepend: site.baseurl}}" class="advent-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
          </a>
    
-         <div class="shop-card-body">
+         <div class="advent-card-body">
    
            <div class="tag-list">
          <span><a href="{{ post.url }}">{{post.advent}}</a></span>
         </div>
-        <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-link"><h3 class="shop-card-title">{{post.title}}</h3></a>
+        <a href="{{post.url | prepend: site.baseurl}}" class="advent-card-link"><h3 class="advent-card-title">{{post.title}}</h3></a>
  
           {% endif %}
       </div>
@@ -39,3 +40,9 @@ If you like to submit something. Feel free to send me an <a href="mailto:fkrekel
  
   {% endfor %}
 </ol>
+
+<footer class="main-footer">
+    <div class="copyright">
+      <a href="/advent/">If you can't wait here is the calendar of 2017</a>
+    </div>
+  </footer>

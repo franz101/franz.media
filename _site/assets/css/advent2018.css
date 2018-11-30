@@ -786,7 +786,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #d3d3d3;
+  color: #fff;
   margin: 0;
   background-color: var(--main-bg-color);
   -webkit-font-smoothing: antialiased;
@@ -870,7 +870,7 @@ pre code {
 
 .wrapper {
   width: 1024px;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -1170,8 +1170,6 @@ pre code {
 opacity: 0.5;
 }
 
-
-
 .post-card .post-card-body .tag {
   text-decoration: none;
   font-size: 10px;
@@ -1185,8 +1183,6 @@ opacity: 0.5;
 
 
 /* = = = = = = = = = = Home Author Styles = = = = = = = = = = */
-
-
 
 .home-author-text { 
   padding-right:4rem;
@@ -1229,6 +1225,7 @@ opacity: 0.5;
   margin-right: 30px;
   -webkit-border-radius: 100%;
           border-radius: 100%;
+          
 }
 
 .home-author-box .home-author-desc h2 {
@@ -1413,16 +1410,16 @@ opacity: 0.5;
   }
 }
 
-/* = = = = = = = = = = shop-Card Styles = = = = = = = = = = */
+/* = = = = = = = = = = advent-Card Styles = = = = = = = = = = */
 
 
 
-.shop-card-box {
+.advent-card-box {
   margin: 50px 0 100px;
   padding: 0;
 }
 
-.shop-card-box li {
+.advent-card-box li {
   position: relative;
   list-style: none;
   float: left;
@@ -1432,16 +1429,16 @@ opacity: 0.5;
   transition: all .3s;
 }
 
-.shop-card-box li:hover {
+.advent-card-box li:hover {
   opacity: 0.9;
 }
 
-.shop-card {
+.advent-card {
   position: relative;
 }
 
 
-.shop-card .shop-card-image {
+.advent-card .advent-card-image {
   display: block;
   width: 100%;
   min-height: 400px;
@@ -1450,14 +1447,14 @@ opacity: 0.5;
   background-repeat: no-repeat;
   opacity: 0.025;
 }
-.shop-card a {
+.advent-card a {
   color: #fff;
   text-align: center;
   text-decoration: none;
   font-size: 2em;
 }
 
-.shop-card .shop-card-image::after {
+.advent-card .advent-card-image::after {
   content: "";
   display: block;
   position: absolute;
@@ -1468,19 +1465,19 @@ opacity: 0.5;
   background: rgba(0, 0, 0, 0.0);
 }
 
-.shop-card .shop-card-body {
+.advent-card .advent-card-body {
   position: absolute;
   left: 47%;
   bottom: 47%;
   opacity:0%;
 }
 
-.shop-card .shop-card-body .shop-card-link {
+.advent-card .advent-card-body .advent-card-link {
   text-decoration: none;
   display: block;
 }
 
-.shop-card .shop-card-body .shop-card-title {
+.advent-card .advent-card-body .advent-card-title {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -1491,18 +1488,18 @@ opacity: 0.5;
   display: none;
 }
 
-.shop-card .shop-card-body .shop-card-title:hover {
+.advent-card .advent-card-body .advent-card-title:hover {
   opacity: 0;
 }
 
-.shop-card .shop-card-body .tag {
+.advent-card .advent-card-body .tag {
   text-decoration: none;
   font-size: 10px;
   text-transform: uppercase;
   color: #fff;
 }
 
-.shop-card .shop-card-body .tag:hover {
+.advent-card .advent-card-body .tag:hover {
   text-decoration: underline;
 }
 
@@ -1540,7 +1537,7 @@ opacity: 0.5;
 
 .main-footer .copyright {
   text-align: center;
-  color: #311e3e;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -1590,25 +1587,38 @@ opacity: 0.5;
 
 }
 
-/* = = = = = = = = = = Shop-Page Styles = = = = = = = = = = */
-.shop-page-content {
+/* = = = = = = = = = = advent-Page Styles = = = = = = = = = = */
+.advent-page-content {
   margin-top: 20px;
   margin-bottom: 100px;
   background-color: #fff;
-  padding: 10px;
+  padding: 30px;
   -webkit-border-top-left-radius: 10px;
           border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-          border-top-right-radius: 10px;
+          
+  -webkit-border-bottom-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          -webkit-border-bottom-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          
+  -webkit-border-bottom-right-radius: 10px;
+          border-bottom-right-radius: 10px;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+          color: black;
 }
-.shop-center {
+
+.advent-page-content a{
+  color: black;
+}
+.advent-center {
   display: block;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
+
+
 
 
 .description h4 {
@@ -1619,7 +1629,7 @@ opacity: 0.5;
 }
 
 
-.shop-image-below {
+.advent-image-below {
   display: block;
   margin-left: auto;
   margin-right: auto;

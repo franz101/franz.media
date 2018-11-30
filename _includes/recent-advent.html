@@ -1,0 +1,12 @@
+<div class="recent-box">
+  <h2 class="recent-title">Recent advent posts</h2>
+  <div class="recent-list">
+    {% assign posts = site.advent | where_exp: "post", "post.tags contains 'Advent'" %}
+    {% for post in posts offset:0 limit:3 %}
+      {% if post.title %}
+        <a href="{{ root_url }}{{ post.url | prepend: site.baseurl }}" class="recent-item" style="background: url({{"/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}}) center no-repeat; background-size: cover;"><span>{{ post.title }}</span></a>
+      {% endif %}
+    {% endfor %}
+    <a href="/advent" class="recent-item" style="background: url({{"/assets/img/post/2018-11-30_advent.jpg" | prepend: site.baseurl }}) center no-repeat; background-size: cover;"><span>Advent 2017</span></a>
+  </div>
+</div> <!-- End Recent-Box -->

@@ -4,7 +4,7 @@ layout: advent
 <div class="flex-container">
   <article class="article-page">
     <div class="wrapper">
-      <div class="shop-page-content">
+      <div class="advent-page-content">
         <div class="header-page">
             <div class="PageNavigation">
                 {% if page.previous.url %}
@@ -19,12 +19,13 @@ layout: advent
                   <a class="next .flex-item"></a>
                 {% endif %}
               </div>
-          <div class="page-date">29€</div>
         </div>
-        <div class="shop-center"></div>
-        <img class="shop-image-below" src="{{"/assets/img/shop/" | prepend: site.baseurl | append : page.img}}">
-        <div class= "description"><h4 >This Item is currently out of stock. Please contact the <a href="mailto:fkrekeler+hs@gmail.com">team</a> for a restock.</h4></div>
-    </div>
+        <div class="advent-center"></div>
+        <img class="advent-image-below" src="{{"/assets/img/advent2018/" | prepend: site.baseurl | append : page.img}}">
+        <div class= "description">
+            {{page.content | markdownify}}
+
+        </div>
         <div class="page-footer">
           <div class="page-tag">
             <span>Tags:</span>
@@ -37,15 +38,14 @@ layout: advent
             <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
             <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+            <a href="https://github.com/franz101/franz.media/tree/master/_advent" title="Fork on Github" rel="nofollow" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
           </div><!-- End Share -->
         </div>
-        {% include author-box.html %}
-        {% include recent-post.html %}
         {% include newsletter.html %}
-    
+        {% include recent-advent.html %}    
       </div>
     </div> <!-- End Wrapper -->
   </article>
   {% include search.html %}
-  {% include footer.html %}
+  {% include advent-footer.html %}
 </div>

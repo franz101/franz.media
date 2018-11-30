@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>1st advent - RANSac Regression - franz.media - Franz Krekeler personal website</title>
+    <meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="">
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#311e3e">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#311e3e">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/advent2018.css">
+  </head>
+  
+<body>
+  <div class="flex-container">
+    <header class="main-header">
+      <div class="wrapper">
+        <div class="header-flex">
+          <div class="menu-icon-container">
+            <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+          </div>
+          <nav class="main-nav">
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cases">Cases</a></li>
+          <li><a href="/film">Films</a></li>
+          <li><a href="/advent-of-data-science-2018">Advent of data science</a></li>
+          <li><a href="/shop">Hackersshop</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+
+          <p class="logo"><a href="/advent-of-data-science-2018">Advent of Data Science</a></p>
+          <div class="search-icon-container">
+            <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+          </div>
+        </div>
+      </div>
+    </header> <!-- End Header -->
+    
+    <div class="content wrapper">
+      <div class="flex-container">
+  <article class="article-page">
+    <div class="wrapper">
+      <div class="advent-page-content">
+        <div class="header-page">
+            <div class="PageNavigation">
+                
+                  <a class="prev .flex-item"></a>
+                
+                <h1 class="page-title .flex-item">1st advent - RANSac Regression</h1>
+                
+                  <a class="next .flex-item"  href="/advent/2032-12-02_template/">&#8250;</a>
+                  
+              </div>
+        </div>
+        <div class="advent-center"></div>
+        <img class="advent-image-below" src="/assets/img/advent2018/ransac_example.png">
+        <div class= "description">
+            <p>Doing some linear regression this summer for a logistic company,
+I got interested in finding ways to automatically assign the linear regression to the data,
+even if it’s noisy.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">RANSACRegressor</span>
+<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span>
+       <span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">reg</span> <span class="o">=</span> <span class="n">RANSACRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Regression score is: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">1</span><span class="p">,]))</span></code></pre></figure>
+
+<p>Check out the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html">sklearn docs</a> for more info on how the RANSACRegressor is implemented. If you  feel in a crazy mood, definately check out the this explanatory song:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1YNjMxxXO-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+<p>Image source: <a href="https://cse.buffalo.edu/~jryde/lectures/cse410/MobileRobotMapping_2.html">CSE Buffalo</a>
+If you enjoyed this post I’m looking forward to the next advent hoho.</p>
+
+
+
+        </div>
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#Blog" class="tag">| Blog</a>
+            
+            <a href="/tags#Advent" class="tag">| Advent</a>
+            
+            <a href="/tags#Data" class="tag">| Data</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=1st advent - RANSac Regression&url=http://localhost:4000/advent/2018-12-01_RANSAC/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/advent/2018-12-01_RANSAC/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/advent/2018-12-01_RANSAC/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+            <a href="https://github.com/franz101/franz.media/tree/master/_advent" title="Fork on Github" rel="nofollow" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <div class="newsletter" id="mc_embed_signup">
+  <h2 class="newsletter-title">Newsletter</h2>
+  <div class="form-container">
+    <p>Subscribe here to get occasional updates</p>
+    <form action="////media.us19.list-manage.com/subscribe/post?u=0a9c8a317e0829670dee8e388&amp;id=0becd46436" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <label class="screen-reader-text" for="mce-EMAIL">Email Address</label>
+      <div class="newsletter-box" id="mc_embed_signup_scroll">
+        <input type="email" name="EMAIL" placeholder="Email address" class="email-input" id="mce-EMAIL" required>
+        <input type="submit" value="Subscribe" name="subscribe" class="subscribe-btn" id="mc-embedded-subscribe">
+      </div>
+    </form>
+  </div>
+</div> <!-- End Newsletter -->
+
+        <div class="recent-box">
+  <h2 class="recent-title">Recent advent posts</h2>
+  <div class="recent-list">
+    
+    
+      
+        <a href="/advent/2018-12-01_RANSAC/" class="recent-item" style="background: url(/assets/img/advent2018/ransac_example.png) center no-repeat; background-size: cover;"><span>1st advent - RANSac Regression</span></a>
+      
+    
+    <a href="/advent" class="recent-item" style="background: url(/assets/img/post/2018-11-30_advent.jpg) center no-repeat; background-size: cover;"><span>Advent 2017</span></a>
+  </div>
+</div> <!-- End Recent-Box -->
+    
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <a href="/advent-of-data-science-2018/">Back to the advent calendar</a>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+    <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="pagination clearfix">
+  
+  
+</div>
+
+    </div> <!-- End Wrapper -->
+    <footer class="main-footer">
+  <div class="copyright">
+    <p>2018  franz.media</p>
+  </div>
+</footer> <!-- End Footer -->
+
+  </div>
+  
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  
+
+</body>
+</html>
