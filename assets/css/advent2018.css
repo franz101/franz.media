@@ -786,7 +786,7 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  color: #3e3e40;
+  color: #d3d3d3;
   margin: 0;
   background-color: var(--main-bg-color);
   -webkit-font-smoothing: antialiased;
@@ -900,6 +900,7 @@ pre code {
   font-family: 'Roboto', sans-serif;
   padding: 15px 0;
   background-color: var(--nav-bg-color);
+  margin: 0px 0px 30px 0px;
   -webkit-box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
           box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.3);
 }
@@ -1115,8 +1116,32 @@ pre code {
   right: 0;
   bottom: 0;
 }
+.glass {
+  background: #ea766a;
+}
+.shoes-glass {
+  background: #a0c4a3;
+}
+.hand-parts {
+  background: #da9dd9;
+}
+.table-with-phone {
+  background: #6da178;
+}
+.orange-shoe {
+  background: #da9567;
+}
+.glass-shoes {
+  background: #5dc6aa;
+}
+.girls-tops {
+  background: #cab0a6;
+}
+.egg-arts {
+  background: #ddd173;
+}
 
-.glass{background: rgba(0,0,0,0.2)}
+
 .post-card .post-card-body {
   position: absolute;
   top: 35%;
@@ -1402,6 +1427,7 @@ opacity: 0.5;
   list-style: none;
   float: left;
   width: 50%;
+  padding: 10px 10px 10px 10px;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -1422,6 +1448,7 @@ opacity: 0.5;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0.05;
 }
 .shop-card a {
   color: #fff;
@@ -2024,6 +2051,7 @@ opacity: 0.5;
 .page-image {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
+    
 }
 
 .page-content,

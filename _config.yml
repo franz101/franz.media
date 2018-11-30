@@ -48,7 +48,7 @@ analytics: # Google Analytics
 # Paginate
 paginate: 8
 paginate_path: /page:num/
-colors: ["glass","shoes-glass","hand-parts","table-with-phone","orange-shoe","glass-shoes","girls-tops","egg-arts"]
+colors: ["glass","shoes-glass","hand-parts","table-with-phone","orange-shoe","glass-shoes","girls-tops","egg-arts","glass","shoes-glass","hand-parts","table-with-phone","orange-shoe","glass-shoes","girls-tops","egg-arts","glass","shoes-glass","hand-parts","table-with-phone","orange-shoe","glass-shoes","girls-tops","egg-arts"]
 # Build settings
 markdown: kramdown
 

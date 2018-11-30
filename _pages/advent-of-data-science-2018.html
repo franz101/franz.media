@@ -2,11 +2,13 @@
 layout: advent
 permalink: /advent-of-data-science-2018/
 ---
+Ho ho ho! As last year, each day you will find little snippets, resources or links for people who are passionate about data science.
+If you like to submit something. Feel free to send me an <a href="mailto:fkrekeler+data@gmail.com">mail</a>.
 <ol class="shop-card-box clearfix">
   {% for post in site.advent %}
   <li>
-    <div class="shop-card">
-      <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image" style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
+    <div class="shop-card {{site.colors[forloop.index0]}}">
+      <a href="{{post.url | prepend: site.baseurl}}" class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
       </a>
 
       <div class="shop-card-body">
