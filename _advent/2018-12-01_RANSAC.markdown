@@ -30,6 +30,9 @@ Check out the [sklearn docs][scikit-docs] for more info on how the RANSACRegress
 Image source: [CSE Buffalo][image-source]
 If you enjoyed this post I'm looking forward to the next advent hoho.
 
+Software used:
+- Python
+- Sklearn
 
 [scikit-docs]: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html
 [image-source]:   https://cse.buffalo.edu/~jryde/lectures/cse410/MobileRobotMapping_2.html
