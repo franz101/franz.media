@@ -9,14 +9,14 @@ If you like to submit something. Feel free to send me an <a href="mailto:fkrekel
   <li>
     <div class="shop-card {{site.colors[forloop.index0]}}">
       {% if post.unclickable != True %}
-      <p  class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
-      </p>
+      <a  class="shop-card-image " style="background-image: url( {{ "/assets/img/advent2018/" | prepend: site.baseurl | append : post.img}} )">
+      </a>
 
       <div class="shop-card-body">
 
         <div class="tag-list">
           
-          <span></span>
+          <span><a>{{post.advent}}</a></span>
           </div>
           <p class="shop-card-link"><h3 class="shop-card-title"> </h3></a>
          {% else %}
