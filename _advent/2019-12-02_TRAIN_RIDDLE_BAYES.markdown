@@ -13,6 +13,7 @@ author: # Add name author (optional)
 
 Source: Frederick Mosteller’s, Fifty Challenging Problems in Probability with Solutions (Dover, 1987):
 
+What is your guess?
 
 
 

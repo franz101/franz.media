@@ -2,6 +2,22 @@
 layout: advent
 ---
 <script>
+
+var $form = $('form#bayes-form'),
+    url = 'https://script.google.com/macros/s/AKfycbwjU_9VyGEl3uMpQ5H1QT-QeX5eWDwFg0Kbh67Ty21lwAtt6ik/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
+
 document.onkeydown = function(e) {
 
     e = e || window.event;
@@ -17,7 +33,9 @@ document.onkeydown = function(e) {
     <div class="wrapper">
       <div class="advent-page-content">
         <div class="header-page">
-          
+            <div class="PageNavigation">
+                <h1 class="page-title .flex-item">{{page.title}}</h1>
+        </div>
         </div>
         <div class="advent-center"></div>
         <img class="advent-image-below" src="{{"/assets/img/advent2018/" | prepend: site.baseurl | append : page.img}}">
