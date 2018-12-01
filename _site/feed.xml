@@ -1,96 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-11-30T23:49:48+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">franz.media - Franz Krekeler personal website</title><subtitle>Seit 2016 Bachelor Student in Mensch-Computer-Interaktion an der Uni Hamburg. Vorher Videoredakteur bei Spiegel Online für bento. Leidenschaft für Datenanalyse und Datenbanken.
-</subtitle><author><name>franz.media</name></author><entry><title type="html">Buchungssystem in Google Sheets</title><link href="http://localhost:4000/rechnungen/" rel="alternate" type="text/html" title="Buchungssystem in Google Sheets" /><published>2018-10-18T12:32:20+02:00</published><updated>2018-10-18T12:32:20+02:00</updated><id>http://localhost:4000/rechnungen</id><content type="html" xml:base="http://localhost:4000/rechnungen/">Automatisiertes Buchungssystem in Google Sheets
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-01T22:14:49+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">franz.media - Franz Krekeler personal website</title><subtitle>Seit 2016 Bachelor Student in Mensch-Computer-Interaktion an der Uni Hamburg. Vorher Videoredakteur bei Spiegel Online für bento. Leidenschaft für Datenanalyse und Datenbanken.
+</subtitle><author><name>franz.media</name></author><entry><title type="html">Buchungssystem in Google Sheets</title><link href="http://localhost:4000/rechnungen/" rel="alternate" type="text/html" title="Buchungssystem in Google Sheets" /><published>2018-10-18T12:32:20+02:00</published><updated>2018-10-18T12:32:20+02:00</updated><id>http://localhost:4000/rechnungen</id><content type="html" xml:base="http://localhost:4000/rechnungen/">&lt;p&gt;Automatisiertes Buchungssystem in Google Sheets&lt;/p&gt;
 
-In diesem Case habe ich meinen Rechnungsprozess automatisiert.
+&lt;p&gt;In diesem Case habe ich meinen Rechnungsprozess automatisiert.
 Die Funktionen von der Google App Script Engine in JavaScript machten es möglich.
-Folgende Funktionen habe ich implemntiert:
-- Rechnungen nach Erstellung in einem neuen Sheet speichern.
-- Uebersicht von allen gestellten Rechnungen.
-- Alte Rechnungen laden.
-- Umwandlung als PDF. Speichern im Google Drive Ordner.
-- Automatischer Versand per Mail.
-- Timerfunktion, wenn die Mail erst am nächsten Tag verschickt werden soll.
-- Massenversand von allen fertigen Rechnungen.
+Folgende Funktionen habe ich implemntiert:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Rechnungen nach Erstellung in einem neuen Sheet speichern.&lt;/li&gt;
+  &lt;li&gt;Uebersicht von allen gestellten Rechnungen.&lt;/li&gt;
+  &lt;li&gt;Alte Rechnungen laden.&lt;/li&gt;
+  &lt;li&gt;Umwandlung als PDF. Speichern im Google Drive Ordner.&lt;/li&gt;
+  &lt;li&gt;Automatischer Versand per Mail.&lt;/li&gt;
+  &lt;li&gt;Timerfunktion, wenn die Mail erst am nächsten Tag verschickt werden soll.&lt;/li&gt;
+  &lt;li&gt;Massenversand von allen fertigen Rechnungen.&lt;/li&gt;
+&lt;/ul&gt;
 
+&lt;p&gt;Buchungsystem in Aktion:&lt;/p&gt;
 
-Buchungsystem in Aktion:
+&lt;p&gt;Der Mail-Dialog. An diese Mail wird dann eine Rechnung als PDF verschickt.
+&lt;img src=&quot;/assets/img/post/buchungssystem1.jpg&quot; alt=&quot;Buchungsystem in Aktion: Hier kommt der Mail-Dialog. An diese Mail wird dann eine Rechnung als PDF verschickt.&quot; /&gt;&lt;/p&gt;
 
-Der Mail-Dialog. An diese Mail wird dann eine Rechnung als PDF verschickt.
-![Buchungsystem in Aktion: Hier kommt der Mail-Dialog. An diese Mail wird dann eine Rechnung als PDF verschickt.]({{site.baseurl}}/assets/img/post/buchungssystem1.jpg)
-
-Die Datenbank von gestellten Rechnungen
-![Buchungsystem in Aktion: Hier sieht man die Datenbank von gestellten Rechnungen]({{site.baseurl}}/assets/img/post/buchungssystem3.jpg)
+&lt;p&gt;Die Datenbank von gestellten Rechnungen
+&lt;img src=&quot;/assets/img/post/buchungssystem3.jpg&quot; alt=&quot;Buchungsystem in Aktion: Hier sieht man die Datenbank von gestellten Rechnungen&quot; /&gt;
 Der Code per Google App Script
-![Buchungsystem in Aktion: Der Code per Google App Script]({{site.baseurl}}/assets/img/post/buchungssystem4.jpg)
+&lt;img src=&quot;/assets/img/post/buchungssystem4.jpg&quot; alt=&quot;Buchungsystem in Aktion: Der Code per Google App Script&quot; /&gt;
 Folgende Möglichkeiten bietet das System.
-![Buchungsystem in Aktion: Folgende Möglichkeiten bietet das System.]({{site.baseurl}}/assets/img/post/buchungssystem2.jpg)
+&lt;img src=&quot;/assets/img/post/buchungssystem2.jpg&quot; alt=&quot;Buchungsystem in Aktion: Folgende Möglichkeiten bietet das System.&quot; /&gt;
 So sieht die Mail dann aus, wenn sie verschickt wird
-![Buchungsystem in Aktion: So sieht die Rechnung dann aus, wenn sie verschickt wird.]({{site.baseurl}}/assets/img/post/buchungssystem5.jpg)</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Case" /><summary type="html">Automatisiertes Buchungssystem in Google Sheets</summary></entry><entry><title type="html">Whatsapp Analyse</title><link href="http://localhost:4000/whatsapp-statistiken/" rel="alternate" type="text/html" title="Whatsapp Analyse" /><published>2017-08-25T12:32:20+02:00</published><updated>2017-08-25T12:32:20+02:00</updated><id>http://localhost:4000/whatsapp-statistiken</id><content type="html" xml:base="http://localhost:4000/whatsapp-statistiken/">In diesem Projekt ging es um die Visualisierung von Nachrichtenverläufen aus WhatsApp. Die wenigsten wissen man kann einen Chat als txt Datei exportieren und verschicken. Mit dem entwickelten Tool kannst du deinen Chat per E-Mail an whatsapporakel@gmail.com schicken und er wird analysiert und du bekommst innerhalb einer Minute ein Ergebnis zurück. 
+&lt;img src=&quot;/assets/img/post/buchungssystem5.jpg&quot; alt=&quot;Buchungsystem in Aktion: So sieht die Rechnung dann aus, wenn sie verschickt wird.&quot; /&gt;&lt;/p&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Case" /><summary type="html">Automatisiertes Buchungssystem in Google Sheets</summary></entry><entry><title type="html">Whatsapp Analyse</title><link href="http://localhost:4000/whatsapp-statistiken/" rel="alternate" type="text/html" title="Whatsapp Analyse" /><published>2017-08-25T12:32:20+02:00</published><updated>2017-08-25T12:32:20+02:00</updated><id>http://localhost:4000/whatsapp-statistiken</id><content type="html" xml:base="http://localhost:4000/whatsapp-statistiken/">&lt;p&gt;In diesem Projekt ging es um die Visualisierung von Nachrichtenverläufen aus WhatsApp. Die wenigsten wissen man kann einen Chat als txt Datei exportieren und verschicken. Mit dem entwickelten Tool kannst du deinen Chat per E-Mail an whatsapporakel@gmail.com schicken und er wird analysiert und du bekommst innerhalb einer Minute ein Ergebnis zurück.&lt;/p&gt;
 
-[Link zur Mail-Adresse](mailto:whatsapporakel@gmail.com)
+&lt;p&gt;&lt;a href=&quot;mailto:whatsapporakel@gmail.com&quot;&gt;Link zur Mail-Adresse&lt;/a&gt;&lt;/p&gt;
 
+&lt;p&gt;Software genutzt:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Pandas, NLTK&lt;/li&gt;
+  &lt;li&gt;MatPlotLib&lt;/li&gt;
+  &lt;li&gt;PIL&lt;/li&gt;
+  &lt;li&gt;IMAPS&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Visualisierung von Nachrichtenverläufen aus WhatsApp. Die wenigsten wissen man kann einen Chat als txt Datei exportieren und verschicken. Mit dem entwickelten Tool kannst du deinen Chat per E-Mail an whatsapporakel@gmail.com schicken und er wird analysiert und du bekommst innerhalb einer Minute ein Ergebnis zurück.</summary></entry><entry><title type="html">Google Trends</title><link href="http://localhost:4000/google-trends-analysis/" rel="alternate" type="text/html" title="Google Trends" /><published>2017-08-24T12:32:20+02:00</published><updated>2017-08-24T12:32:20+02:00</updated><id>http://localhost:4000/google-trends-analysis</id><content type="html" xml:base="http://localhost:4000/google-trends-analysis/">&lt;p&gt;In diesem Projekt ging es um die Erfassung mehrer Google Trends am Beispiel von Stadtteilen in Hamburg&lt;/p&gt;
 
-Software genutzt:
-- Python
-- Pandas, NLTK
-- MatPlotLib
-- PIL
-- IMAPS</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Visualisierung von Nachrichtenverläufen aus WhatsApp. Die wenigsten wissen man kann einen Chat als txt Datei exportieren und verschicken. Mit dem entwickelten Tool kannst du deinen Chat per E-Mail an whatsapporakel@gmail.com schicken und er wird analysiert und du bekommst innerhalb einer Minute ein Ergebnis zurück.</summary></entry><entry><title type="html">Google Trends</title><link href="http://localhost:4000/google-trends-analysis/" rel="alternate" type="text/html" title="Google Trends" /><published>2017-08-24T12:32:20+02:00</published><updated>2017-08-24T12:32:20+02:00</updated><id>http://localhost:4000/google-trends-analysis</id><content type="html" xml:base="http://localhost:4000/google-trends-analysis/">In diesem Projekt ging es um die Erfassung mehrer Google Trends am Beispiel von Stadtteilen in Hamburg
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/10cHccDpl0rKax0_5us2LCUl5XkEmJQGYtvGqVHpP6b0/edit?usp=sharing&quot;&gt;Link zum Google Sheets&lt;/a&gt;&lt;/p&gt;
 
-[Link zum Google Sheets](https://docs.google.com/spreadsheets/d/10cHccDpl0rKax0_5us2LCUl5XkEmJQGYtvGqVHpP6b0/edit?usp=sharing)
+&lt;p&gt;Software genutzt:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Pandas&lt;/li&gt;
+  &lt;li&gt;Requests&lt;/li&gt;
+  &lt;li&gt;Google Sheets&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Erfassung mehrer Google Trends am Beispiel von Stadtteilen in Hamburg</summary></entry><entry><title type="html">Bento Überschriften Generator</title><link href="http://localhost:4000/bento-clickbait-title-generator/" rel="alternate" type="text/html" title="Bento Überschriften Generator" /><published>2017-08-23T12:32:20+02:00</published><updated>2017-08-23T12:32:20+02:00</updated><id>http://localhost:4000/bento-clickbait-title-generator</id><content type="html" xml:base="http://localhost:4000/bento-clickbait-title-generator/">&lt;p&gt;Generator&lt;/p&gt;
 
-Software genutzt:
-- Python
-- Pandas
-- Requests
-- Google Sheets</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Erfassung mehrer Google Trends am Beispiel von Stadtteilen in Hamburg</summary></entry><entry><title type="html">Bento Überschriften Generator</title><link href="http://localhost:4000/bento-clickbait-title-generator/" rel="alternate" type="text/html" title="Bento Überschriften Generator" /><published>2017-08-23T12:32:20+02:00</published><updated>2017-08-23T12:32:20+02:00</updated><id>http://localhost:4000/bento-clickbait-title-generator</id><content type="html" xml:base="http://localhost:4000/bento-clickbait-title-generator/">Generator
+&lt;p&gt;In diesem Projekt habe ich aus 1000 Bento Überschriften einen Zufallsgenerator gebaut. Er nutzt eine simple Markov-Kette… Probier ihn aus:&lt;/p&gt;
 
-In diesem Projekt habe ich aus 1000 Bento Überschriften einen Zufallsgenerator gebaut. Er nutzt eine simple Markov-Kette... Probier ihn aus:
+&lt;p&gt;&lt;a href=&quot;https://codepen.io/franz101/full/xOLzQX/&quot;&gt;Link zum Überschriften Generator&lt;/a&gt;&lt;/p&gt;
 
-[Link zum Überschriften Generator](https://codepen.io/franz101/full/xOLzQX/)
+&lt;p&gt;Software genutzt:&lt;/p&gt;
 
-Software genutzt:
+&lt;ul&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+  &lt;li&gt;Google Sheets&lt;/li&gt;
+  &lt;li&gt;Markov Chain Algorithmus&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Generator</summary></entry><entry><title type="html">Gebrauchtwagen Preise</title><link href="http://localhost:4000/gebrauchtwagen-preise/" rel="alternate" type="text/html" title="Gebrauchtwagen Preise" /><published>2017-08-22T12:32:20+02:00</published><updated>2017-08-22T12:32:20+02:00</updated><id>http://localhost:4000/gebrauchtwagen-preise</id><content type="html" xml:base="http://localhost:4000/gebrauchtwagen-preise/">&lt;p&gt;Wie teuer ist mein Auto wirklich? In diesem Projekt ging es um die Analyse der Gebrauchtwagen Preise von 2009 bis 2015. Interessant ist hier die Einbindung von monatlichen Kosten wie zum Beispiel: Versicherung, Kraftstoffkosten etc.&lt;/p&gt;
 
-- JavaScript
-- Google Sheets
-- Markov Chain Algorithmus</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Generator</summary></entry><entry><title type="html">Gebrauchtwagen Preise</title><link href="http://localhost:4000/gebrauchtwagen-preise/" rel="alternate" type="text/html" title="Gebrauchtwagen Preise" /><published>2017-08-22T12:32:20+02:00</published><updated>2017-08-22T12:32:20+02:00</updated><id>http://localhost:4000/gebrauchtwagen-preise</id><content type="html" xml:base="http://localhost:4000/gebrauchtwagen-preise/">Wie teuer ist mein Auto wirklich? In diesem Projekt ging es um die Analyse der Gebrauchtwagen Preise von 2009 bis 2015. Interessant ist hier die Einbindung von monatlichen Kosten wie zum Beispiel: Versicherung, Kraftstoffkosten etc.
+&lt;p&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1VFYY0e9OhDeszUx2WgZvv9w8Hqqhxf4fFJ7t_MbGyUE&quot;&gt;Link zum Google Sheets&lt;/a&gt;&lt;/p&gt;
 
-[Link zum Google Sheets](https://docs.google.com/spreadsheets/d/1VFYY0e9OhDeszUx2WgZvv9w8Hqqhxf4fFJ7t_MbGyUE)
+&lt;p&gt;Software genutzt:&lt;/p&gt;
 
-Software genutzt:
+&lt;ul&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Pandas&lt;/li&gt;
+  &lt;li&gt;Google Sheets&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Wie teuer ist mein Auto wirklich? In diesem Projekt ging es um die Analyse der Gebrauchtwagen Preise von 2009 bis 2015. Interessant ist hier die Einbindung von monatlichen Kosten wie zum Beispiel: Versicherung, Kraftstoffkosten etc.</summary></entry><entry><title type="html">Datenanalyse Ag</title><link href="http://localhost:4000/datenanalye-hamburg/" rel="alternate" type="text/html" title="Datenanalyse Ag" /><published>2017-08-22T12:32:20+02:00</published><updated>2017-08-22T12:32:20+02:00</updated><id>http://localhost:4000/datenanalye-hamburg</id><content type="html" xml:base="http://localhost:4000/datenanalye-hamburg/">&lt;p&gt;In der DataMining Ag geht es um den Austausch zur Datenanalyse. Das Treffen findet jeden Dienstag statt.&lt;/p&gt;
 
-- Python
-- Pandas
-- Google Sheets</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Wie teuer ist mein Auto wirklich? In diesem Projekt ging es um die Analyse der Gebrauchtwagen Preise von 2009 bis 2015. Interessant ist hier die Einbindung von monatlichen Kosten wie zum Beispiel: Versicherung, Kraftstoffkosten etc.</summary></entry><entry><title type="html">Datenanalyse Ag</title><link href="http://localhost:4000/datenanalye-hamburg/" rel="alternate" type="text/html" title="Datenanalyse Ag" /><published>2017-08-22T12:32:20+02:00</published><updated>2017-08-22T12:32:20+02:00</updated><id>http://localhost:4000/datenanalye-hamburg</id><content type="html" xml:base="http://localhost:4000/datenanalye-hamburg/">In der DataMining Ag geht es um den Austausch zur Datenanalyse. Das Treffen findet jeden Dienstag statt.
+&lt;p&gt;&lt;a href=&quot;https://www2.informatik.uni-hamburg.de/fachschaft/wiki/index.php/Datamining-AG&quot;&gt;Link zum Wiki&lt;/a&gt;&lt;/p&gt;
 
-[Link zum Wiki](https://www2.informatik.uni-hamburg.de/fachschaft/wiki/index.php/Datamining-AG)
+&lt;p&gt;Mitglieder aus den Bereichen:&lt;/p&gt;
 
-Mitglieder aus den Bereichen:
+&lt;ul&gt;
+  &lt;li&gt;Finanzmathe&lt;/li&gt;
+  &lt;li&gt;Informatik&lt;/li&gt;
+  &lt;li&gt;Psychologie&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In der DataMining Ag geht es um den Austausch zur Datenanalyse. Das Treffen findet jeden Dienstag statt.</summary></entry><entry><title type="html">Soundcloud Track IDs</title><link href="http://localhost:4000/find-soundcloud-track-id/" rel="alternate" type="text/html" title="Soundcloud Track IDs" /><published>2017-08-22T12:32:20+02:00</published><updated>2017-08-22T12:32:20+02:00</updated><id>http://localhost:4000/find-soundcloud-track-id</id><content type="html" xml:base="http://localhost:4000/find-soundcloud-track-id/">&lt;p&gt;Wenn ich Musik suche, schaue ich oft auf Soundcloud. Meistens gibt es Set wo ich viele Lieder drin höre die mir gefallen. Mit einem einfach Skript habe ich es ermöglicht die Track IDs aus den Kommentaren zu filtern.&lt;/p&gt;
 
-- Finanzmathe
-- Informatik
-- Psychologie</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In der DataMining Ag geht es um den Austausch zur Datenanalyse. Das Treffen findet jeden Dienstag statt.</summary></entry><entry><title type="html">Soundcloud Track IDs</title><link href="http://localhost:4000/find-soundcloud-track-id/" rel="alternate" type="text/html" title="Soundcloud Track IDs" /><published>2017-08-22T12:32:20+02:00</published><updated>2017-08-22T12:32:20+02:00</updated><id>http://localhost:4000/find-soundcloud-track-id</id><content type="html" xml:base="http://localhost:4000/find-soundcloud-track-id/">Wenn ich Musik suche, schaue ich oft auf Soundcloud. Meistens gibt es Set wo ich viele Lieder drin höre die mir gefallen. Mit einem einfach Skript habe ich es ermöglicht die Track IDs aus den Kommentaren zu filtern.
+&lt;p&gt;&lt;a href=&quot;https://soundcloudids.herokuapp.com/&quot;&gt;Link zur Heroku App&lt;/a&gt;&lt;/p&gt;
 
-[Link zur Heroku App](https://soundcloudids.herokuapp.com/)
+&lt;p&gt;Software:&lt;/p&gt;
 
-Software:
+&lt;ul&gt;
+  &lt;li&gt;Flask&lt;/li&gt;
+  &lt;li&gt;Heroku&lt;/li&gt;
+  &lt;li&gt;Soundcloud API&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Wenn ich Musik suche, schaue ich oft auf Soundcloud. Meistens gibt es Set wo ich viele Lieder drin höre die mir gefallen. Mit einem einfach Skript habe ich es ermöglicht die Track IDs aus den Kommentaren zu filtern.</summary></entry><entry><title type="html">NC Analyse</title><link href="http://localhost:4000/reicht-mein-nc-fuers-studium/" rel="alternate" type="text/html" title="NC Analyse" /><published>2017-08-21T12:32:20+02:00</published><updated>2017-08-21T12:32:20+02:00</updated><id>http://localhost:4000/reicht-mein-nc-fuers-studium</id><content type="html" xml:base="http://localhost:4000/reicht-mein-nc-fuers-studium/">&lt;p&gt;Werde ich es schaffen? Das ist eine Frage die sich viele Schüler und nicht Studenten bei der Bewerbung fragen. Für diese Frage, habe ich eine Hochrechnung des NCs gemacht und einen kleinen Blog-Post geschrieben.&lt;/p&gt;
 
-- Flask
-- Heroku
-- Soundcloud API</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Wenn ich Musik suche, schaue ich oft auf Soundcloud. Meistens gibt es Set wo ich viele Lieder drin höre die mir gefallen. Mit einem einfach Skript habe ich es ermöglicht die Track IDs aus den Kommentaren zu filtern.</summary></entry><entry><title type="html">NC Analyse</title><link href="http://localhost:4000/reicht-mein-nc-fuers-studium/" rel="alternate" type="text/html" title="NC Analyse" /><published>2017-08-21T12:32:20+02:00</published><updated>2017-08-21T12:32:20+02:00</updated><id>http://localhost:4000/reicht-mein-nc-fuers-studium</id><content type="html" xml:base="http://localhost:4000/reicht-mein-nc-fuers-studium/">Werde ich es schaffen? Das ist eine Frage die sich viele Schüler und nicht Studenten bei der Bewerbung fragen. Für diese Frage, habe ich eine Hochrechnung des NCs gemacht und einen kleinen Blog-Post geschrieben.
+&lt;p&gt;&lt;a href=&quot;https://medium.com/@franz101/reicht-mein-nc-für-die-uni-prognose-für-informatik-fächer-der-uni-hamburg-e26a6ed5e291&quot;&gt;Link zum Medium-Post&lt;/a&gt;&lt;/p&gt;
 
-[Link zum Medium-Post](https://medium.com/@franz101/reicht-mein-nc-für-die-uni-prognose-für-informatik-fächer-der-uni-hamburg-e26a6ed5e291)
+&lt;p&gt;Software:&lt;/p&gt;
 
-Software:
+&lt;ul&gt;
+  &lt;li&gt;Google Sheets&lt;/li&gt;
+  &lt;li&gt;PDF2TABLES&lt;/li&gt;
+  &lt;li&gt;MEDIUM&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Werde ich es schaffen? Das ist eine Frage die sich viele Schüler und nicht Studenten bei der Bewerbung fragen. Für diese Frage, habe ich eine Hochrechnung des NCs gemacht und einen kleinen Blog-Post geschrieben.</summary></entry><entry><title type="html">Kartenanalyse</title><link href="http://localhost:4000/kartenanalyse-in-cartodb/" rel="alternate" type="text/html" title="Kartenanalyse" /><published>2017-08-20T12:32:20+02:00</published><updated>2017-08-20T12:32:20+02:00</updated><id>http://localhost:4000/kartenanalyse-in-cartodb</id><content type="html" xml:base="http://localhost:4000/kartenanalyse-in-cartodb/">&lt;p&gt;In diesem Projekt ging es um die Visualisierung von Immobilienpreisen über das Jahr 2010 bis 2016. Besonders interessant, war die Visualisierung als Heatmap.&lt;/p&gt;
 
-- Google Sheets
-- PDF2TABLES
-- MEDIUM</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">Werde ich es schaffen? Das ist eine Frage die sich viele Schüler und nicht Studenten bei der Bewerbung fragen. Für diese Frage, habe ich eine Hochrechnung des NCs gemacht und einen kleinen Blog-Post geschrieben.</summary></entry><entry><title type="html">Kartenanalyse</title><link href="http://localhost:4000/kartenanalyse-in-cartodb/" rel="alternate" type="text/html" title="Kartenanalyse" /><published>2017-08-20T12:32:20+02:00</published><updated>2017-08-20T12:32:20+02:00</updated><id>http://localhost:4000/kartenanalyse-in-cartodb</id><content type="html" xml:base="http://localhost:4000/kartenanalyse-in-cartodb/">In diesem Projekt ging es um die Visualisierung von Immobilienpreisen über das Jahr 2010 bis 2016. Besonders interessant, war die Visualisierung als Heatmap. 
+&lt;p&gt;&lt;a href=&quot;https://franz101.carto.com/builder/28d733c3-33f4-4810-80ab-9836eb7a7c58/embed&quot;&gt;Link zur interaktiven Karte&lt;/a&gt;&lt;/p&gt;
 
-[Link zur interaktiven Karte](https://franz101.carto.com/builder/28d733c3-33f4-4810-80ab-9836eb7a7c58/embed)
-
-
-Software genutzt:
-- Python
-- Pandas
-- CartoDB</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Visualisierung von Immobilienpreisen über das Jahr 2010 bis 2016. Besonders interessant, war die Visualisierung als Heatmap.</summary></entry></feed>
+&lt;p&gt;Software genutzt:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Python&lt;/li&gt;
+  &lt;li&gt;Pandas&lt;/li&gt;
+  &lt;li&gt;CartoDB&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Franz Krekeler</name></author><category term="Blog" /><category term="Data" /><summary type="html">In diesem Projekt ging es um die Visualisierung von Immobilienpreisen über das Jahr 2010 bis 2016. Besonders interessant, war die Visualisierung als Heatmap.</summary></entry></feed>

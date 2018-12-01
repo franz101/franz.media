@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>1st advent - RANSACRegressor - franz.media - Franz Krekeler personal website</title>
+    <title>The locomotive problem - franz.media - Franz Krekeler personal website</title>
     <meta name="description" content="For this day here is the RANSACRegressor">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -87,31 +87,11 @@ document.onkeydown = function(e) {
           
         </div>
         <div class="advent-center"></div>
-        <img class="advent-image-below" src="/assets/img/advent2018/ransac_example.png">
+        <img class="advent-image-below" src="/assets/img/advent2018/train_riddle.png">
         <div class= "description">
-            <p>Doing some linear regression this summer for a logistic company,
-I got interested in finding ways to automatically assign the linear regression to the data,
-even if it’s noisy.</p>
+            <p>“A railroad numbers its locomotives in order 1..N. One day you see a locomotive with the number 60. Estimate how many locomotives the railroad has.”</p>
 
-<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">RANSACRegressor</span>
-<span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">make_regression</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">make_regression</span><span class="p">(</span>
-       <span class="n">n_samples</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">n_features</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">noise</span><span class="o">=</span><span class="mf">4.0</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">reg</span> <span class="o">=</span> <span class="n">RANSACRegressor</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Regression score is: {}"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="mi">1</span><span class="p">,]))</span></code></pre></figure>
-
-<p>Check out the <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RANSACRegressor.html">sklearn docs</a> for more info on how the RANSACRegressor is implemented. If you  feel in a crazy mood, definately check out the this explanatory song:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1YNjMxxXO-E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p>Image source: <a href="https://cse.buffalo.edu/~jryde/lectures/cse410/MobileRobotMapping_2.html">CSE Buffalo</a>
-If you enjoyed this post I’m looking forward to the next advent hoho.</p>
-
-<p>Software used:</p>
-<ul>
-  <li>Python</li>
-  <li>Sklearn</li>
-</ul>
+<p>Source: Frederick Mosteller’s, Fifty Challenging Problems in Probability with Solutions (Dover, 1987):</p>
 
 
         </div>
@@ -128,9 +108,9 @@ If you enjoyed this post I’m looking forward to the next advent hoho.</p>
           </div><!-- End Tags -->
           <div class="page-share">
             <span>Share:</span>
-            <a href="https://twitter.com/intent/tweet?text=1st advent - RANSACRegressor&url=http://localhost:4000/advent/2018-12-01_RANSAC/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/advent/2018-12-01_RANSAC/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href="https://plus.google.com/share?url=http://localhost:4000/advent/2018-12-01_RANSAC/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/intent/tweet?text=The locomotive problem&url=http://localhost:4000/advent/2019-12-02_TRAIN_RIDDLE_BAYES/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/advent/2019-12-02_TRAIN_RIDDLE_BAYES/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/advent/2019-12-02_TRAIN_RIDDLE_BAYES/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
             <a href="https://github.com/franz101/franz.media/tree/master/_advent" title="Fork on Github" rel="nofollow" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
           </div><!-- End Share -->
         </div>
