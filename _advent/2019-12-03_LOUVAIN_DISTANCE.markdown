@@ -12,10 +12,10 @@ If you took part in the [Kaggle survey][kaggle-survey] about data science,
 you might be stumpled upon the [Data Skeptic Podcast][dsp].
 It's one of my favourite data science podcast.
 
-The did a great episode about the louvain distance for [community detection][source].
-Basically it's mathematical way of weighing the interconnectedness of a connected graph.
+They did a great episode about the louvain distance for [community detection][source].
+Basically it's a mathematical way of weighing the interconnectedness of a connected graph.
 
-So the cool thing about this podcast episode, there is a beautiful implementation by another Blogger named  [Eliot Andres][jupyter]. He created an amazing [Jupyter Notebook][jupyter] to calculate the louvain distance for facebook friends.
+So the cool thing about this podcast episode, there is a beautiful implementation by another Blogger named  [Eliot Andres][jupyter]. He created an amazing [Tutorial/Jupyter Notebook][jupyter] to calculate the louvain distance for facebook friends.
 
 
 

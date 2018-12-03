@@ -1,9 +1,9 @@
 ---
 layout: advent-item
-title: The locomotive problem
+title: 2nd Advent - The locomotive problem
 date: 2018-11-30
 advent: 2
-description: For this day here is the RANSACRegressor # Add post description (optional)
+description: Bayes train riddle # Add post description (optional)
 img: train_riddle.png # Add image post (optional)
 tags: [Blog, Advent, Data]
 author: # Add name author (optional)
