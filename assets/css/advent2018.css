@@ -1423,7 +1423,8 @@ opacity: 0.5;
   position: relative;
   list-style: none;
   float: left;
-  width: 50%;
+  width: 100%;
+  max-width: 400px;
   padding: 10px 10px 10px 10px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -2227,3 +2228,24 @@ opacity: 0.5;
     margin: 0 0 15px;
   }
 }
+
+/* = = = = = = = = = = GRID SYSTEM = = = = = = = = = = */
+
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 600px) {...} 
+/*
+/*Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {...} 
+/*
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...} 
+/*
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 800px) {
+  .advent-card-box li {
+  width: 100%;
+  max-width: 100%;
+}}
