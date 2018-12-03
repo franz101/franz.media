@@ -1,6 +1,6 @@
 ---
 layout: advent-item
-title: Louvain Distance
+title: 3rd Advent - Louvain Distance
 date: 2018-11-30
 advent: 3
 description: Louvain Distance for community detection with sample dataset # Add post description (optional)
