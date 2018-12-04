@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>4th Advent - Pandas Merge As Of - franz.media - Franz Krekeler personal website</title>
+    <meta name="description" content="Merging time series data without resampling.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@franzfilm" />
+    <meta name="twitter:title" content="Advent of data science 2018" />
+    <meta name="twitter:description" content="Daily little code snippets and goodies." />
+    <meta name="twitter:image" content="https://franz.media/assets/img/post/2018-11-30_advent.jpg" />
+
+<meta property="og:type"               content="website" />
+<meta property="og:title"              content="Advent of data science 2018" />
+<meta property="og:description"        content="Daily little code snippets and goodies" />
+<meta property="og:image"              content="https://franz.media/assets/img/post/2018-11-30_advent.jpg" />
+
+    <link rel="shortcut icon" href="/assets/img/favicon/afavicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#311e3e">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#311e3e">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#311e3e">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/advent2018.css">
+  </head>
+  
+<body>
+  <div class="flex-container">
+    <header class="main-header">
+      <div class="wrapper">
+        <div class="header-flex">
+          <div class="menu-icon-container">
+            <span class="menu-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
+          </div>
+          <nav class="main-nav">
+        <span class="menu-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/cases">Cases</a></li>
+          <li><a href="/film">Films</a></li>
+          <li><a href="/advent-of-data-science-2018">Advent of data science</a></li>
+          <li><a href="/advent">Advent of data science 2017</a></li>
+          <li><a href="/shop">Hackersshop</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+
+          <p class="logo"><a href="/advent-of-data-science-2018">Advent of Data Science</a></p>
+          <div class="search-icon-container">
+            <span class="search-icon"><a><i class="fa fa-search" aria-hidden="true"></i></a></span>
+          </div>
+        </div>
+      </div>
+    </header> <!-- End Header -->
+    
+    <div class="content wrapper">
+      <script>
+
+var $form = $('form#bayes-form'),
+    url = 'https://script.google.com/macros/s/AKfycbwjU_9VyGEl3uMpQ5H1QT-QeX5eWDwFg0Kbh67Ty21lwAtt6ik/exec'
+
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
+
+document.onkeydown = function(e) {
+
+    e = e || window.event;
+
+    switch(e.which){
+    // {case 39:alert("rechts");break
+    //case 37:alert("links");break
+    }
+  }
+</script>
+<div class="flex-container">
+  <article class="article-page">
+    <div class="wrapper">
+      <div class="advent-page-content">
+        <div class="header-page">
+            <div class="PageNavigation">
+                <h1 class="page-title .flex-item">4th Advent - Pandas Merge As Of</h1>
+        </div>
+        </div>
+        <div class="advent-center"></div>
+        <img class="advent-image-below" src="/assets/img/advent2018/pandas_merge_as_of.png">
+        <div class= "description">
+            <p>Merging dataframes with datetime values can be tricky if the time is not exact.
+Pandas does a great job working with this.</p>
+
+<p>First DataFrame</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">quotes</span>
+                     <span class="n">time</span> <span class="n">ticker</span>     <span class="n">bid</span>     <span class="n">ask</span>
+<span class="mi">0</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.023</span>   <span class="n">GOOG</span>  <span class="mf">720.50</span>  <span class="mf">720.93</span>
+<span class="mi">1</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.023</span>   <span class="n">MSFT</span>   <span class="mf">51.95</span>   <span class="mf">51.96</span>
+<span class="mi">2</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.030</span>   <span class="n">MSFT</span>   <span class="mf">51.97</span>   <span class="mf">51.98</span>
+<span class="mi">3</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.041</span>   <span class="n">MSFT</span>   <span class="mf">51.99</span>   <span class="mf">52.00</span>
+<span class="mi">4</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.048</span>   <span class="n">GOOG</span>  <span class="mf">720.50</span>  <span class="mf">720.93</span>
+<span class="mi">5</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.049</span>   <span class="n">AAPL</span>   <span class="mf">97.99</span>   <span class="mf">98.01</span>
+<span class="mi">6</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.072</span>   <span class="n">GOOG</span>  <span class="mf">720.50</span>  <span class="mf">720.88</span>
+<span class="mi">7</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.075</span>   <span class="n">MSFT</span>   <span class="mf">52.01</span>   <span class="mf">52.03</span></code></pre></figure>
+
+<p>Second DataFrame</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">trades</span>
+                     <span class="n">time</span> <span class="n">ticker</span>   <span class="n">price</span>  <span class="n">quantity</span>
+<span class="mi">0</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.023</span>   <span class="n">MSFT</span>   <span class="mf">51.95</span>        <span class="mi">75</span>
+<span class="mi">1</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.038</span>   <span class="n">MSFT</span>   <span class="mf">51.95</span>       <span class="mi">155</span>
+<span class="mi">2</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.048</span>   <span class="n">GOOG</span>  <span class="mf">720.77</span>       <span class="mi">100</span>
+<span class="mi">3</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.048</span>   <span class="n">GOOG</span>  <span class="mf">720.92</span>       <span class="mi">100</span>
+<span class="mi">4</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.048</span>   <span class="n">AAPL</span>   <span class="mf">98.00</span>       <span class="mi">100</span></code></pre></figure>
+
+<p>Merging them DataFrame</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge_asof</span><span class="p">(</span><span class="n">trades</span><span class="p">,</span> <span class="n">quotes</span><span class="p">,</span>
+<span class="o">...</span>                       <span class="n">on</span><span class="o">=</span><span class="s">'time'</span><span class="p">,</span>
+<span class="o">...</span>                       <span class="n">by</span><span class="o">=</span><span class="s">'ticker'</span><span class="p">)</span>
+                     <span class="n">time</span> <span class="n">ticker</span>   <span class="n">price</span>  <span class="n">quantity</span>     <span class="n">bid</span>     <span class="n">ask</span>
+<span class="mi">0</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.023</span>   <span class="n">MSFT</span>   <span class="mf">51.95</span>        <span class="mi">75</span>   <span class="mf">51.95</span>   <span class="mf">51.96</span>
+<span class="mi">1</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.038</span>   <span class="n">MSFT</span>   <span class="mf">51.95</span>       <span class="mi">155</span>   <span class="mf">51.97</span>   <span class="mf">51.98</span>
+<span class="mi">2</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.048</span>   <span class="n">GOOG</span>  <span class="mf">720.77</span>       <span class="mi">100</span>  <span class="mf">720.50</span>  <span class="mf">720.93</span>
+<span class="mi">3</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.048</span>   <span class="n">GOOG</span>  <span class="mf">720.92</span>       <span class="mi">100</span>  <span class="mf">720.50</span>  <span class="mf">720.93</span>
+<span class="mi">4</span> <span class="mi">2016</span><span class="o">-</span><span class="mo">05</span><span class="o">-</span><span class="mi">25</span> <span class="mi">13</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mf">00.048</span>   <span class="n">AAPL</span>   <span class="mf">98.00</span>       <span class="mi">100</span>     <span class="n">NaN</span>     <span class="n">NaN</span></code></pre></figure>
+
+<p>As you can the time index has slight time differences, still they are being merged.</p>
+
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.merge_asof.html">Read full documentation</a></p>
+
+
+        </div>
+        <div class="page-footer">
+          <div class="page-tag">
+            <span>Tags:</span>
+            
+            <a href="/tags#Blog" class="tag">| Blog</a>
+            
+            <a href="/tags#Advent" class="tag">| Advent</a>
+            
+            <a href="/tags#Data" class="tag">| Data</a>
+            
+          </div><!-- End Tags -->
+          <div class="page-share">
+            <span>Share:</span>
+            <a href="https://twitter.com/intent/tweet?text=4th Advent - Pandas Merge As Of&url=http://localhost:4000/advent/2019-12-04_pandas_merge_as_of/" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://facebook.com/sharer.php?u=http://localhost:4000/advent/2019-12-04_pandas_merge_as_of/" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://plus.google.com/share?url=http://localhost:4000/advent/2019-12-04_pandas_merge_as_of/" title="Share on Google+" rel="nofollow" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
+            <a href="https://github.com/franz101/franz.media/tree/master/_advent" title="Fork on Github" rel="nofollow" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+          </div><!-- End Share -->
+        </div>
+        <div class="newsletter" id="mc_embed_signup">
+  <h2 class="newsletter-title">Newsletter</h2>
+  <div class="form-container">
+    <p>Subscribe here to get occasional updates</p>
+    <form action="////media.us19.list-manage.com/subscribe/post?u=0a9c8a317e0829670dee8e388&amp;id=0becd46436" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <label class="screen-reader-text" for="mce-EMAIL">Email Address</label>
+      <div class="newsletter-box" id="mc_embed_signup_scroll">
+        <input type="email" name="EMAIL" placeholder="Email address" class="email-input" id="mce-EMAIL" required>
+        <input type="submit" value="Subscribe" name="subscribe" class="subscribe-btn" id="mc-embedded-subscribe">
+      </div>
+    </form>
+  </div>
+</div> <!-- End Newsletter -->
+
+        <div class="recent-box">
+  <h2 class="recent-title">Recent advent posts</h2>
+  <div class="recent-list">
+    
+    
+      
+        <a href="/advent/2018-12-01_ransac/" class="recent-item" style="background: url(/assets/img/advent2018/ransac_example.png) center no-repeat; background-size: cover;"><span>1st advent - RANSACRegressor</span></a>
+      
+    
+      
+        <a href="/advent/2019-12-02_train_riddle_bayes/" class="recent-item" style="background: url(/assets/img/advent2018/train_riddle.png) center no-repeat; background-size: cover;"><span>2nd Advent - The locomotive problem</span></a>
+      
+    
+      
+        <a href="/advent/2019-12-03_louvain_distance/" class="recent-item" style="background: url(/assets/img/advent2018/facebook_louvain_distance.jpg) center no-repeat; background-size: cover;"><span>3rd Advent - Louvain Distance</span></a>
+      
+    
+    <a href="/advent" class="recent-item" style="background: url(/assets/img/post/2018-11-30_advent.jpg) center no-repeat; background-size: cover;"><span>Advent 2017</span></a>
+  </div>
+</div> <!-- End Recent-Box -->
+    
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
+  <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <footer class="main-footer">
+  <div class="copyright">
+    <a href="/advent-of-data-science-2018/">Back to the advent calendar</a>
+  </div>
+</footer> <!-- End Footer -->
+
+</div>
+
+    <div class="search-box">
+  <div class="wrapper">
+    <div class="search-grid">
+      <form class="search-form">
+        <div id="search-container">
+          <input type="text" id="search-input" class="search" placeholder="Search">
+        </div>
+      </form>
+      <ul id="results-container" class="results-search"></ul>
+      <div class="icon-close-container">
+        <span class="search-icon-close"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="pagination clearfix">
+  
+  
+</div>
+
+    </div> <!-- End Wrapper -->
+    <footer class="main-footer">
+  <div class="copyright">
+    <p>2018  franz.media</p>
+  </div>
+</footer> <!-- End Footer -->
+
+  </div>
+  
+  <!-- JS -->
+<script src="/assets/js/jquery-3.2.1.min.js"></script>
+<script src="/assets/js/jekyll-search.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    fuzzy: false,
+    exclude: ['Welcome']
+  });
+</script>
+<script src="/assets/js/main.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127820216-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127820216-3');
+</script>
+
+
+
+</body>
+</html>
