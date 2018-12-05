@@ -18,4 +18,4 @@ What is your guess?
 
 [Solution to the riddle][bayes]
 
-[bayes]: "http://www.greenteapress.com/thinkbayes/html/thinkbayes004.html#sec28"
+[bayes]: http://www.greenteapress.com/thinkbayes/html/thinkbayes004.html#sec28
