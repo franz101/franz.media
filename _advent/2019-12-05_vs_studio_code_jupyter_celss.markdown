@@ -1,6 +1,6 @@
 ---
 layout: advent-item
-title: 5th Advent - Pandas Merge As Of
+title: 5th Advent - Jupyter Cells in Visual Studio Code
 date: 2018-11-30
 advent: 5
 description: Programm with Jupyter cell style in VS Code  # Add post description (optional)

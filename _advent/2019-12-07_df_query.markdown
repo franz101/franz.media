@@ -1,0 +1,28 @@
+7---
+layout: advent-item
+title: 7th Advent - df.query making Pandas faster
+date: 2018-11-30
+advent: 7
+description: Use df.query to save time.
+img: pandas.jpg # Add image post (optional)
+tags: [Blog, Advent, Data]
+author: # Add name author (optional)
+---
+Little did I know. Reading Wes McKinneys introduction to Data Science.
+I started writing filters like this over and over:
+df[(df.height < 200) & (df.weight < 100)]
+
+A few years passed and I read the new edition about Python for finance.
+Bam! I couldn't believe how easy and practical the query method is.
+
+{% highlight python %}
+df[(df.height < 200) & (df.weight < 100)]
+#vs
+df.query('height < 200 and weight < 100')
+{% endhighlight %}
+
+
+[Great resource for df query][dfquery]
+
+
+[dfquery]:https://jakevdp.github.io/PythonDataScienceHandbook/03.12-performance-eval-and-query.html
