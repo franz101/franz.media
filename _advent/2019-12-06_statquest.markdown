@@ -10,7 +10,7 @@ author: # Add name author (optional)
 ---
 This YouTube-Channel is a must!
 Josh Starmer is doing a great job at explaining statistics cleary.
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=NEaUSP4YerM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/watch?v=NEaUSP4YerM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 If you want to understand statiscal concepts from the ground up. You definetely should subscribe him. Bam!
 
