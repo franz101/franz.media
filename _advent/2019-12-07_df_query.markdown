@@ -1,9 +1,9 @@
 ---
 layout: advent-item
-title: 7th Advent - df.query making Pandas faster
+title: 7th Advent - df query making Pandas faster
 date: 2018-11-30
 advent: 7
-description: Use df.query to save time.
+description: Use df query to save time.
 img: pandas.jpg # Add image post (optional)
 tags: [Blog, Advent, Data]
 author: # Add name author (optional)
