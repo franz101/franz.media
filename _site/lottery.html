@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Lottery with Audio</title>
+    <style>
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes rotateHue {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: backgroundAnimation 15s ease infinite, rotateHue 10s linear infinite;
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            animation: pulse 2s infinite;
+        }
+
+        h1 {
+            color: #ff00ff;
+            text-shadow: 2px 2px #00ffff;
+        }
+
+        select {
+            margin: 1rem 0;
+            padding: 0.5rem;
+            font-size: 1rem;
+            background-color: #ffff00;
+            border: 3px solid #00ff00;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #ff00ff;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background-color: #00ffff;
+            transform: scale(1.1);
+        }
+
+        #result {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff00ff;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #lotteryAnimation {
+            font-size: 4rem;
+            margin: 1rem 0;
+            animation: rotateHue 2s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seat Lottery</h1>
+        <select id="nameSelect">
+            <option value="">Select your name</option>
+            <option value="Stas">Stas</option>
+            <option value="Darina">Darina</option>
+            <option value="Megan">Megan</option>
+            <option value="Niklas">Niklas</option>
+            <option value="Franz">Franz</option>
+        </select>
+        <br>
+        <button id="startLottery" onclick="startLottery()">Start Lottery</button>
+        <div id="lotteryAnimation" class="hidden">🎰</div>
+        <div id="result" class="hidden"></div>
+    </div>
+
+    <script>
+       const audioBase64 = "data:audio/wav;base64,UklGRhJeBABXQVZFZm10IBAAAAABAAEAECcAACBOAAACABAAZGF0Ye5dBAD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGA/3//f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//38BgAGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgP9//3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9/AYABgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYD/f/9//3//fwGAAYABgAGA/3//f/9//38BgAGAAYABgP9//3//fwGAAYABgAGA/3//f/9//3"; // Example base64 string
+            const audio = new Audio(audioBase64);
+      document.body.addEventListener('click', () => {
+            
+            audio.play();
+        });
+      
+      
+        const seats = [
+            {row: 4, seat: 8},
+            {row: 4, seat: 9},
+            {row: 4, seat: 10},
+            {row: 3, seat: 11},
+            {row: 3, seat: 10}
+        ];
+
+        const people = ["Stas", "Darina", "Megan", "Niklas", "Franz"];
+
+        // Audio context and oscillator
+        let audioContext;
+        let oscillator;
+        let clickCount = 0;
+
+        // Tetris-like melody frequencies
+        const melodyFrequencies = [
+            261.63, // C4
+            293.66, // D4
+            329.63, // E4
+            349.23, // F4
+            392.00, // G4
+            440.00, // A4
+            493.88, // B4
+            523.25  // C5
+        ];
+
+        function initAudio() {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        }
+
+        function playNote() {
+            if (!audioContext) initAudio();
+
+            if (oscillator) {
+                oscillator.stop();
+            }
+
+            oscillator = audioContext.createOscillator();
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(melodyFrequencies[clickCount % melodyFrequencies.length], audioContext.currentTime);
+
+            const gainNode = audioContext.createGain();
+            gainNode.gain.setValueAtTime(0.5, audioContext.currentTime);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5);
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.start();
+            oscillator.stop(audioContext.currentTime + 0.5);
+
+            clickCount++;
+        }
+
+        document.body.addEventListener('click', playNote);
+
+        function startLottery() {
+            const nameSelect = document.getElementById('nameSelect');
+            const selectedName = nameSelect.value;
+            
+            if (!selectedName) {
+                alert("Please select your name!");
+                return;
+            }
+
+            const lotteryAnimation = document.getElementById('lotteryAnimation');
+            const result = document.getElementById('result');
+            
+            lotteryAnimation.classList.remove('hidden');
+            result.classList.add('hidden');
+
+            let counter = 0;
+            const animationInterval = setInterval(() => {
+                lotteryAnimation.textContent = ['🎰', '💺', '🎫', '🌈', '🦄', '🍭'][counter % 6];
+                counter++;
+                playNote(); // Play a note for each animation frame
+            }, 100);
+
+            setTimeout(() => {
+                clearInterval(animationInterval);
+                lotteryAnimation.classList.add('hidden');
+                
+                const personIndex = people.indexOf(selectedName);
+                const assignedSeat = seats[personIndex];
+                
+                result.innerHTML = `<span style="font-size: 1.5em;">🎉</span> ${selectedName}, your groovy seat is: <br>Row ${assignedSeat.row}, Seat ${assignedSeat.seat} <span style="font-size: 1.5em;">🎉</span>`;
+                result.classList.remove('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
